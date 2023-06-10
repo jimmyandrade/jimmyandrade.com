@@ -1,0 +1,68 @@
+{
+  "name": "jimmyandrade.com",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": ".",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/jimmyandrade.com"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "."
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "jimmyandrade.com:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "jimmyandrade.com:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "jimmyandrade.com:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "jimmyandrade.com:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectName}"],
+      "options": {
+        "jestConfig": "jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["./**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
