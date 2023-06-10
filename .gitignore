@@ -43,3 +43,6 @@ Thumbs.db
 
 # Nx Cloud
 nx-cloud.env
+
+# Local Environment Variables
+.env.local
