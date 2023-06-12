@@ -14,8 +14,6 @@ import NextLink from 'next/link';
 import globalNavContent from '../../content/globalnav.json';
 import { Container } from '../../lib/components/Container';
 import { Root } from './Root';
-import { TwitterLogoIcon } from '@radix-ui/react-icons';
-import { twitterHandle } from '../../constants';
 
 export interface GlobalNavMenuProps extends NavigationMenuProps {
   'aria-label': NavigationMenuProps['aria-label'];
