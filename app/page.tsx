@@ -37,7 +37,7 @@ const Homepage = () => {
               <p>
                 <Link
                   className={'button bg-white text-black w-full'}
-                  href={'https://onerpm.link/8936683700'}
+                  href={'https://jimmyandrade.com/duvida'}
                   rel={'noopener noreferrer'}
                   target={'_blank'}
                   title={'? (Dúvida)'}
