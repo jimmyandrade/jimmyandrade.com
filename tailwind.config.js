@@ -11,7 +11,29 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    colors: {
+      black: '#07050A',
+      lavender: {
+        70: '#C090D0',
+      },
+      grape: {
+        40: '#5F4B8B',
+      },
+      sky: {
+        60: '#7CAFC4',
+      },
+      olive: {
+        50: '#7F9172',
+      },
+      transparent: 'transparent',
+      white: '#F3F1F8',
+    },
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-sans)'],
+        serif: ['var(--font-serif)'],
+      },
+    },
   },
   plugins: [],
 };

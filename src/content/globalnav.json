@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "title": "Página inicial",
+      "href": "/"
+    },
+    {
+      "title": "Loja",
+      "href": "/loja"
+    },
+    {
+      "title": "Imprensa",
+      "href": "/imprensa"
+    }
+  ]
+}
