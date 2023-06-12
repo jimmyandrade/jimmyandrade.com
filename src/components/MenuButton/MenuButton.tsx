@@ -34,8 +34,7 @@ export const MenuButton = forwardRef<HTMLButtonElement, MenuButtonProps>(
         aria-expanded={ariaExpanded}
         aria-label={accessibleName}
         className={classNames(
-          'icon-button text-white',
-          'bg-grape-40 bg-opacity-0 hover:bg-opacity-50',
+          'icon-button text-white bg-grape-40 bg-opacity-0 hover:bg-opacity-50 rounded-full',
           className
         )}
         role={role}

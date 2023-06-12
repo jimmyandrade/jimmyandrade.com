@@ -9,34 +9,38 @@ import classNames from 'classnames';
 
 export interface CountdownProps
   extends HTMLAttributes<HTMLDivElement>,
-    AsChildComponent {}
+    AsChildComponent {
+  'data-datetime': string;
+}
 
 const formatNumber = (value: number) => {
   return value < 10 ? `0${value}` : value;
 };
 
 export const Countdown = forwardRef<HTMLDivElement, CountdownProps>(
-  ({ className = '', ...props }, forwardedRef) => {
-    const timeLeft = useCountdown('2023-06-27T00:00:00-03:00');
+  ({ className = '', 'data-datetime': dateTime, ...props }, forwardedRef) => {
+    const { isLoading, timeLeft } = useCountdown(dateTime);
 
     return (
       <div
+        aria-busy={isLoading}
         className={classNames(
           'grid gap-x-4 sm:gap-x-6 md:gap-x-8 lg:gap-x-10 xl:gap-x-12 text-center select-none',
           className
         )}
+        data-datetime={dateTime}
         ref={forwardedRef}
         {...props}
       >
         <BigNumber className={'col-start-1 row-start-1'} value={timeLeft.days}>
-          {formatNumber(timeLeft.days)}
+          {isLoading ? '99' : formatNumber(timeLeft.days)}
         </BigNumber>
         <CountdownLabel className={'col-start-1 row-start-2'}>
           dias
         </CountdownLabel>
         <span className={'sr-only'}>,</span>
         <BigNumber className={'col-start-2 row-start-1'} value={timeLeft.hours}>
-          {formatNumber(timeLeft.hours)}
+          {isLoading ? '23' : formatNumber(timeLeft.hours)}
         </BigNumber>
         <CountdownLabel className={'col-start-2 row-start-2 uppercase'}>
           horas
@@ -46,7 +50,7 @@ export const Countdown = forwardRef<HTMLDivElement, CountdownProps>(
           className={'col-start-3 row-start-1'}
           value={timeLeft.minutes}
         >
-          {formatNumber(timeLeft.minutes)}
+          {isLoading ? '59' : formatNumber(timeLeft.minutes)}
         </BigNumber>
         <CountdownLabel className={'col-start-3 row-start-2 uppercase'}>
           minutos
@@ -56,7 +60,7 @@ export const Countdown = forwardRef<HTMLDivElement, CountdownProps>(
           className={'col-start-4 row-start-1'}
           value={timeLeft.seconds}
         >
-          {formatNumber(timeLeft.seconds)}
+          {isLoading ? '59' : formatNumber(timeLeft.seconds)}
         </BigNumber>
         <CountdownLabel className={'col-start-4 row-start-2 uppercase'}>
           segundos

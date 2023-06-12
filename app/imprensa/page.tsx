@@ -1,5 +1,4 @@
 import { Container } from '../../src/lib/components/Container';
-import { contentAnchorName } from '../../src/constants';
 import { PageHeading } from '../../src/components/PageHeading/PageHeading';
 import { PageHeader } from '../../src/components/PageHeader/PageHeader';
 
@@ -11,7 +10,7 @@ export const metadata = {
 };
 
 const NewsroomPage = () => (
-  <Container id={contentAnchorName}>
+  <Container>
     <PageHeader>
       <PageHeading>{metadata.title}</PageHeading>
     </PageHeader>

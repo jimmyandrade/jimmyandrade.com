@@ -1,17 +1,22 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
 export const useCountdown = (value: string) => {
+  const zeroValue = 0;
+
+  const defaultTimeLeft = {
+    days: zeroValue,
+    hours: zeroValue,
+    minutes: zeroValue,
+    seconds: zeroValue,
+  };
+
   const calculateTimeLeft = () => {
     const dateValue = new Date(value);
 
-    const zeroValue = 0;
     const difference = dateValue.getTime() - new Date().getTime();
-    const timeLeft = {
-      days: zeroValue,
-      hours: zeroValue,
-      minutes: zeroValue,
-      seconds: zeroValue,
-    };
+    const timeLeft = { ...defaultTimeLeft };
 
     if (difference > zeroValue) {
       const milliseconds = 1000;
@@ -33,15 +38,17 @@ export const useCountdown = (value: string) => {
     return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [isLoading, setIsLoading] = useState(true);
+  const [timeLeft, setTimeLeft] = useState(defaultTimeLeft);
 
   useEffect(() => {
     const timeout = 1000;
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
+      setIsLoading(false);
     }, timeout);
     return () => clearTimeout(timer);
   });
 
-  return timeLeft;
+  return { isLoading, timeLeft };
 };

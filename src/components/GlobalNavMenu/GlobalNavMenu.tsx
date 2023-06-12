@@ -5,7 +5,6 @@ import {
   Link,
   List,
   NavigationMenuProps,
-  Root,
 } from '@radix-ui/react-navigation-menu';
 import classNames from 'classnames';
 import { forwardRef, useEffect, useState } from 'react';
@@ -14,6 +13,7 @@ import { MenuButton } from '../MenuButton';
 import NextLink from 'next/link';
 import globalNavContent from '../../content/globalnav.json';
 import { Container } from '../../lib/components/Container';
+import { Root } from './Root';
 
 export interface GlobalNavMenuProps extends NavigationMenuProps {
   'aria-label': NavigationMenuProps['aria-label'];
@@ -57,20 +57,9 @@ export const GlobalNavMenu = forwardRef<HTMLElement, GlobalNavMenuProps>(
 
     return (
       <Root
+        aria-expanded={isMenuOpen}
         aria-label={ariaLabel}
-        className={classNames(
-          'container relative xl:mx-auto motion-safe:transition-all shadow text-white',
-          'before:from-grape-40 before:to-lavender-70 before:bg-gradient-to-r before:absolute before:w-full before:h-full before:opacity-80 before:rounded',
-          {
-            'h-12': !isMenuOpen,
-            'h-auto': isMenuOpen,
-            'top-0': !isPageScrolled,
-            'bg-grape-40 bg-opacity-80 max-w-full w-full': !isPageScrolled,
-            'max-w-6xl mx-4 rounded top-4 backdrop-blur backdrop-filter backdrop-saturate-150':
-              isPageScrolled,
-          },
-          className
-        )}
+        data-scrolled={isPageScrolled}
         id={id}
         itemScope={itemScope}
         itemType={itemType}
@@ -85,12 +74,6 @@ export const GlobalNavMenu = forwardRef<HTMLElement, GlobalNavMenuProps>(
             className={'flex-shrink-0 absolute top-0'}
             id={'globalnav-menu-trigger-button'}
             onClick={handleToggleMenu}
-          />
-          <input
-            id={'menu-state'}
-            className={'sr-only'}
-            type={'checkbox'}
-            checked={isMenuOpen}
           />
           <div
             className={
@@ -111,7 +94,6 @@ export const GlobalNavMenu = forwardRef<HTMLElement, GlobalNavMenuProps>(
           </div>
           <List
             id={'globalnav-list'}
-            aria-hidden={!isMenuOpen}
             className={classNames(
               'flex motion-safe:transition motion-safe:ease-out motion-safe:duration-100',
               'text-xs flex-col gap-y-3.5 ml-3.5 py-3.5',
@@ -124,11 +106,13 @@ export const GlobalNavMenu = forwardRef<HTMLElement, GlobalNavMenuProps>(
             role={'none'}
           >
             {globalNavContent.items.map((item) => (
-              <Item key={item.title}>
+              <Item aria-hidden={!isMenuOpen} key={item.title}>
                 <Link
                   asChild={true}
                   className={classNames(
-                    'inline-flex p-1 motion-safe:transition-all overflow-clip select-none uppercase',
+                    'touchable inline-flex items-center justify-start motion-safe:transition-all overflow-clip select-none uppercase',
+                    'p-4 sm:p-1 sm:text-sm w-full sm:w-fit',
+                    'hover:bg-white hover:text-grape-40',
                     {
                       'opacity-0': !isMenuOpen,
                       'opacity-100': isMenuOpen,

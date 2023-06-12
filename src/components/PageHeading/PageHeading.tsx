@@ -16,8 +16,8 @@ export const PageHeading = forwardRef<HTMLHeadingElement, PageHeadingProps>(
         {...props}
         ref={forwardedRef}
         className={classNames(
-          'text-5xl bg-clip-text text-transparent bg-gradient-to-br from-lavender-70 select-none to-grape-40',
-          'text-5xl leading-normal bg-clip-text text-transparent bg-gradient-to-br from-lavender-70 select-none to-grape-40',
+          'bg-clip-text bg-duvida bg-gradient-to-br leading-normal text-transparent',
+          'text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl',
           className
         )}
       >

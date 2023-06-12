@@ -18,7 +18,7 @@ export const metadata = {
 
 const Homepage = () => {
   return (
-    <article id={'content'} className={'mx-auto w-full'}>
+    <article className={'mx-auto w-full'}>
       <h1 className={'sr-only'}>Página inicial</h1>
       <ul className={'lg:grid lg:grid-cols-2'}>
         <li
@@ -52,8 +52,7 @@ const Homepage = () => {
             >
               <Countdown
                 className={'px-8 pt-8 pb-4 text-white z-20'}
-                data-absolute={true}
-                data-rounded={true}
+                data-datetime={'2023-06-27T00:00:00-03:00'}
               />
               <Link
                 className={classNames(

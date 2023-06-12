@@ -11,7 +11,11 @@ export const PageHeader = forwardRef<HTMLElement, PageHeaderProps>(
   ({ asChild = false, className = '', ...props }, forwardedRef) => {
     const Component = asChild ? Slot : 'header';
     return (
-      <Component className={classNames('pt-20 pb-12', className)} {...props} />
+      <Component
+        className={classNames('pt-20 pb-12', className)}
+        {...props}
+        ref={forwardedRef}
+      />
     );
   }
 );

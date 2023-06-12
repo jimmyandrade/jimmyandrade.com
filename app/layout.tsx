@@ -6,7 +6,7 @@ import { contentAnchorName } from '../src/constants';
 import { Montserrat, Zilla_Slab } from 'next/font/google';
 import { Container } from '../src/lib/components/Container';
 import classNames from 'classnames';
-import { GlobalNavMenu } from '../src/components/GlobalNavMenu/GlobalNavMenu';
+import { GlobalNavMenu } from '../src/components/GlobalNavMenu';
 import type { Metadata } from 'next';
 
 const appName = 'JimmyAndrade.com';
@@ -127,47 +127,25 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           role={'banner'}
         >
           <GlobalNavMenu aria-label={'Navegação global'} id={'globalnav'} />
-          {/*  <Container className={'flex items-center'}>*/}
-          {/*    <GlobalNavMenu aria-label={'Navegação global'} />*/}
-          {/*<nav*/}
-          {/*  */}
-          {/*  className={*/}
-          {/*    'flex flex-col sm:flex-row items-center space-x-4 w-full sm:static left-0 top-0 right-0 bottom-0 h-screen sm:h-12'*/}
-          {/*  }*/}
-          {/*  <Link*/}
-          {/*    className={'select-none h-12 items-center inline-flex'}*/}
-          {/*  >*/}
-          {/*    Jimmy Andrade*/}
-          {/*  </Link>*/}
-          {/*        <Link*/}
-          {/*          className={*/}
-          {/*            'items-center inline-flex justify-center select-none'*/}
-          {/*          }*/}
-          {/*        >*/}
-          {/*          <span*/}
-          {/*            className={*/}
-          {/*              'inline-flex p-4 sm:p-1 text-4xl sm:text-sm md:text-base'*/}
-          {/*            }*/}
-          {/*            itemProp={'name'}*/}
-          {/*          >*/}
-          {/*            {item.title}*/}
-          {/*          </span>*/}
-          {/*        </Link>*/}
-          {/*      </li>*/}
-          {/*    ))}*/}
-          {/*  </ul>*/}
-          {/*</nav>*/}
-          {/*  </Container>*/}
         </header>
-        <main className={'bg-white'} id={'main'} role={'main'} tabIndex={-1}>
+        <main
+          className={'bg-white'}
+          id={contentAnchorName}
+          role={'main'}
+          tabIndex={-1}
+        >
           {children}
         </main>
         <footer
+          aria-labelledby={'global-footer-heading'}
           className={'bg-grape-40 text-white'}
           itemScope={true}
           itemType={'https://schema.org/WPFooter'}
           role={'contentinfo'}
         >
+          <h2 className={'sr-only'} id={'global-footer-heading'}>
+            Rodapé de {appName}
+          </h2>
           <Container>
             <nav
               className={'py-8'}
