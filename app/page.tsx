@@ -83,7 +83,6 @@ const Homepage = () => {
                 src={sinceraMenteImage}
               />
             </GalleryImage>
-            {/*</Link>*/}
           </div>
         </li>
         <li className={'homepage-section'}>

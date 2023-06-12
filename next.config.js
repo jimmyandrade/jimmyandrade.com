@@ -22,11 +22,17 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  redirects: async () => {
+    return [
+      {
+        source: '/manifest.json',
+        destination: '/manifest.webmanifest',
+        permanent: true,
+      },
+    ];
+  },
 };
 
-const plugins = [
-  // Add more Next.js plugins to this list if needed.
-  withNx,
-];
+const plugins = [withNx];
 
 module.exports = composePlugins(...plugins)(nextConfig);

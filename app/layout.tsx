@@ -2,15 +2,15 @@ import './global.css';
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import globalNavContent from '../src/content/globalnav.json';
-import { contentAnchorName } from '../src/constants';
+import { appName, contentAnchorName, icons } from '../src/constants';
 import { Montserrat, Zilla_Slab } from 'next/font/google';
 import { Container } from '../src/lib/components/Container';
 import classNames from 'classnames';
 import { GlobalNavMenu } from '../src/components/GlobalNavMenu';
 import type { Metadata } from 'next';
+import { Wordmark } from '../src/components/Wordmark';
 
-const appName = 'JimmyAndrade.com';
-const defaultTitle = 'Jimmy Andrade – website oficial – músicas, vídeos e mais';
+const defaultTitle = `${appName} – website oficial – músicas, vídeos e mais`;
 const url = 'https://jimmyandrade.com';
 const mainAuthor = 'Jimmy Andrade Música e Publicidade Digital';
 
@@ -38,14 +38,9 @@ export const metadata: Metadata = {
     email: false,
     telephone: false,
   },
-  keywords: ['Jimmy Andrade', 'Jimmy', 'Andrade'],
-  icons: [
-    {
-      sizes: '16x16',
-      url: '/favicon.ico',
-      type: 'image/x-icon',
-    },
-  ],
+  keywords: [appName, 'Jimmy', 'Andrade'],
+  icons,
+  manifest: '/manifest.webmanifest',
   metadataBase: new URL(url),
   openGraph: {
     locale: 'pt_BR',
@@ -71,7 +66,7 @@ export const metadata: Metadata = {
   themeColor: '#5F4B8B',
   title: {
     default: defaultTitle,
-    template: '%s | Jimmy Andrade',
+    template: `%s | ${appName}`,
   },
   twitter: {
     creator: '@jimmyandrade',
@@ -113,7 +108,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       lang={'pt-br'}
     >
       <body className={'bg-grape-40 font-sans leading-6 m-0'} key={'body'}>
-        <h1 className={'sr-only'}>Jimmy Andrade</h1>
+        <h1 className={'sr-only'}>
+          <Wordmark />
+        </h1>
         <a
           className={'sr-only focus:not-sr-only'}
           href={`#${contentAnchorName}`}
@@ -160,7 +157,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                     href={'/'}
                     title={'Página inicial'}
                   >
-                    <span itemProp={'name'}>JimmyAndrade.com</span>
+                    <span itemProp={'name'}>{appName}</span>
                   </Link>
                   <ul
                     aria-labelledby={'footer-globalnav-heading'}

@@ -37,7 +37,8 @@ export const GlobalNavMenu = forwardRef<HTMLElement, GlobalNavMenuProps>(
 
     useEffect(() => {
       const listener = () => {
-        setIsPageScrolled(window.scrollY > 12 * 4);
+        const threshold = 0;
+        setIsPageScrolled(window.scrollY > threshold);
       };
       window.addEventListener('scroll', listener);
       return () => {

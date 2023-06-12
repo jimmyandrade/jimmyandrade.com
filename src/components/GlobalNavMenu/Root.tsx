@@ -25,14 +25,14 @@ export const Root = forwardRef<HTMLElement, GlobalNavMenuRoot>(
     return (
       <PrimitiveRoot
         className={classNames(
-          'container relative xl:mx-auto motion-safe:transition-all shadow text-white',
+          'container relative xl:mx-auto motion-safe:transition-all text-white',
           {
             'h-12': !ariaExpanded,
             'h-auto': ariaExpanded,
             'top-0': !isPageScrolled,
-            'bg-grape-40 bg-opacity-100 max-w-full top-0 w-full':
+            'shadow-none bg-grape-40 bg-opacity-100 max-w-full top-0 w-full':
               !isPageScrolled,
-            'max-w-xs mx-auto rounded top-4 before:bg-duvida before:bg-gradient-to-l before:opacity-80 before:rounded blurred-backdrop bg-gradient-before':
+            'shadow max-w-xs mx-auto rounded top-4 before:bg-duvida before:bg-gradient-to-l before:opacity-80 before:rounded blurred-backdrop bg-gradient-before':
               isPageScrolled,
           },
           className
