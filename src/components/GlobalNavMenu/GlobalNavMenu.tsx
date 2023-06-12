@@ -14,6 +14,8 @@ import NextLink from 'next/link';
 import globalNavContent from '../../content/globalnav.json';
 import { Container } from '../../lib/components/Container';
 import { Root } from './Root';
+import { TwitterLogoIcon } from '@radix-ui/react-icons';
+import { twitterHandle } from '../../constants';
 
 export interface GlobalNavMenuProps extends NavigationMenuProps {
   'aria-label': NavigationMenuProps['aria-label'];
@@ -84,13 +86,14 @@ export const GlobalNavMenu = forwardRef<HTMLElement, GlobalNavMenuProps>(
             tabIndex={-1}
           >
             <Link
+              aria-label={'Ir para a página inicial'}
               className={'touchable py-3.5'}
-              href={'/'}
+              href={'/#'}
               onClick={handleHideMenu}
               rel={'home'}
-              title={'Página inicial de Jimmy Andrade'}
+              title={'Ir para a página inicial de Jimmy Andrade'}
             >
-              <Wordmark />
+              <Wordmark className={'brand'} />
             </Link>
           </div>
           <List

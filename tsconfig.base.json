@@ -1,22 +1,33 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
     "baseUrl": ".",
     "declaration": false,
     "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "lib": ["es2020", "dom"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "isolatedModules": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2015.Promise", "ES2017", "ES2020", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
     },
+    "resolveJsonModule": true,
     "rootDir": ".",
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "target": "es2015"
+    "strict": true,
+    "target": "ES2015",
+    "typeRoots": ["node_modules/@types"]
   },
   "exclude": [
     "node_modules",

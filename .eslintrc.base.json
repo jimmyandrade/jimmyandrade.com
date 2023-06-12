@@ -1,5 +1,9 @@
 {
   "root": true,
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
   "ignorePatterns": ["**/*"],
   "plugins": ["@nx"],
   "overrides": [
@@ -37,6 +41,13 @@
         "jest": true
       },
       "rules": {}
+    },
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "multiline-comment-style": "off",
+        "spaced-comment": "off"
+      }
     }
   ]
 }

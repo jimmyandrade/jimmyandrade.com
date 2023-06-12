@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { Countdown } from '../src/components/Countdown/Countdown';
 import { GalleryImage } from '../src/components/GalleryImage/GalleryImage';
 import classNames from 'classnames';
+import { ChevronRightIcon } from '@radix-ui/react-icons';
 
 export const metadata = {
   alternates: {
@@ -18,26 +19,42 @@ export const metadata = {
 
 const Homepage = () => {
   return (
-    <article className={'mx-auto w-full'}>
+    <article className={'home mx-auto w-full'}>
       <h1 className={'sr-only'}>Página inicial</h1>
       <ul className={'lg:grid lg:grid-cols-2'}>
         <li
           className={'homepage-section col-span-2 lg:h-screen lg:max-h-screen'}
         >
-          <div className={'card absolute-center bottom-0'}>Dúvida</div>
-          <Link
-            href={'https://onerpm.link/8936683700'}
-            rel={'noopener noreferrer'}
-            target={'_blank'}
-            title={'? (Dúvida)'}
+          <div
+            className={
+              'bg-grape-40 bg-opacity-60 card absolute-center bottom-2 text-white'
+            }
           >
-            <Image
-              alt={''}
-              className={'select-none w-full'}
-              draggable={false}
-              src={duvidaImage}
-            />
-          </Link>
+            <div className={'card-content space-y-4'}>
+              <p className={'text-center'}>
+                <cite>? (Dúvida)</cite>: nova versão de 2023
+              </p>
+              <p>
+                <Link
+                  className={'button bg-white text-black w-full'}
+                  href={'https://onerpm.link/8936683700'}
+                  rel={'noopener noreferrer'}
+                  target={'_blank'}
+                  title={'? (Dúvida)'}
+                >
+                  Ouvir agora <ChevronRightIcon />
+                </Link>
+              </p>
+            </div>
+          </div>
+          <Image
+            alt={
+              'Jimmy Andrade usa cabelo rosa e está sorrindo para o lado. Atrás dele, um fundo rosa com balões em tons de rosa.'
+            }
+            className={'select-none w-full'}
+            draggable={false}
+            src={duvidaImage}
+          />
         </li>
         <li
           className={'homepage-section col-span-2 lg:h-screen lg:max-h-screen'}
@@ -50,17 +67,23 @@ const Homepage = () => {
                 'before:bg-olive-50 before:bg-gradient-to-r before:from-sky-60 before:to-olive-50 before:rounded-2xl before:opacity-50 before:w-full before:h-full before:absolute before:pointer-events-none before:z-10'
               )}
             >
+              <p
+                className={
+                  'text-center pt-8 text-white md:text-md lg:text-lg xl:text-xl z-20'
+                }
+              >
+                <cite>Sincera/Mente</cite>, música nova dia{' '}
+                <time dateTime={'2023-06-27'}>27 de junho</time>:
+              </p>
               <Countdown
                 className={'px-8 pt-8 pb-4 text-white z-20'}
                 data-datetime={'2023-06-27T00:00:00-03:00'}
               />
               <Link
                 className={classNames(
-                  'bg-opacity-100 bg-white',
-                  'font-semibold text-black text-center',
+                  'button bg-white text-black',
                   'text-sm sm:text-base md:text-lg',
-                  'shadow py-2.5 px-3.5 rounded-xl z-30 m-2 sm:m-3 lg:m-4 xl:m-6',
-                  'hover:bg-opacity-80'
+                  'py-2.5 px-3.5 z-30 m-2 sm:m-3 lg:m-4 xl:m-6'
                 )}
                 href={'https://onerpm.link/5461550308'}
                 rel={'noopener noreferrer'}
