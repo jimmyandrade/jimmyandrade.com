@@ -13,6 +13,7 @@ import {
   productColor,
   twitterHandle,
   pwaStartUrl,
+  baseURL,
 } from '../src/constants';
 import { Montserrat, Zilla_Slab } from 'next/font/google';
 import { Container } from '../src/lib/components/Container';
@@ -23,20 +24,18 @@ import { Wordmark } from '../src/components/Wordmark';
 import {
   ChevronDownIcon,
   HeartFilledIcon,
-  InstagramLogoIcon,
-  TwitterLogoIcon,
   VercelLogoIcon,
 } from '@radix-ui/react-icons';
 
 const defaultTitle = `${appName} – website oficial – músicas, vídeos e mais`;
-const url = 'https://jimmyandrade.com';
 const mainAuthor = 'Jimmy Andrade Música e Publicidade Digital';
+const url = '/';
 
 export const metadata: Metadata = {
   appLinks: {
     web: {
       should_fallback: true,
-      url,
+      url: baseURL,
     },
   },
   appleWebApp: {
@@ -46,7 +45,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: mainAuthor,
-      url,
+      url: baseURL,
     },
   ],
   applicationName: appName,
@@ -60,7 +59,7 @@ export const metadata: Metadata = {
   keywords: keywordsArray,
   icons,
   manifest: '/manifest.webmanifest',
-  metadataBase: new URL(url),
+  metadataBase: new URL(baseURL),
   openGraph: {
     determiner: 'the',
     title: defaultTitle,
@@ -68,7 +67,7 @@ export const metadata: Metadata = {
     emails: 'contato@jimmyandrade',
     siteName: appName,
     locale: defaultLanguage.replace('-', '_'),
-    url,
+    url: `${baseURL}${url}`,
     countryName: 'Brasil',
     type: 'website',
   },
@@ -97,7 +96,7 @@ export const metadata: Metadata = {
     'geo.region': defaultLanguage,
     handheldfriendly: 'true',
     ie_rm_off: 'true',
-    'mobile-agent': 'format=html5; url=https://jimmyandrade.com/',
+    'mobile-agent': `format=html5; url=${baseURL}`,
     mobileoptimized: 320,
     'mobile-web-app-capable': 'yes',
     'msapplication-navbutton-color': productColor,
@@ -259,40 +258,40 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                     ))}
                   </ul>
                 </li>
-                <li>
-                  Redes sociais
-                  <ul
-                    className={'mt-6 space-y-6 sm:mt-4 sm:space-y-4'}
-                    role={'list'}
-                  >
-                    <li>
-                      <Link
-                        className={'touchable'}
-                        href={`https://instagram.com/jimmyandrade`}
-                        rel={'noopener noreferrer'}
-                        target={'_blank'}
-                      >
-                        <span className={'emoji'}>
-                          <InstagramLogoIcon />
-                        </span>{' '}
-                        Instagram
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={'touchable'}
-                        href={`https://twitter.com/${twitterHandle}`}
-                        rel={'noopener noreferrer'}
-                        target={'_blank'}
-                      >
-                        <span className={'emoji'}>
-                          <TwitterLogoIcon />
-                        </span>{' '}
-                        Twitter
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+                {/*<li>*/}
+                {/*  Redes sociais*/}
+                {/*  <ul*/}
+                {/*    className={'mt-6 space-y-6 sm:mt-4 sm:space-y-4'}*/}
+                {/*    role={'list'}*/}
+                {/*  >*/}
+                {/*    <li>*/}
+                {/*      <Link*/}
+                {/*        className={'touchable'}*/}
+                {/*        href={`https://instagram.com/jimmyandrade`}*/}
+                {/*        rel={'noopener noreferrer'}*/}
+                {/*        target={'_blank'}*/}
+                {/*      >*/}
+                {/*        <span className={'emoji'}>*/}
+                {/*          <InstagramLogoIcon />*/}
+                {/*        </span>{' '}*/}
+                {/*        Instagram*/}
+                {/*      </Link>*/}
+                {/*    </li>*/}
+                {/*    <li>*/}
+                {/*      <Link*/}
+                {/*        className={'touchable'}*/}
+                {/*        href={`https://twitter.com/${twitterHandle}`}*/}
+                {/*        rel={'noopener noreferrer'}*/}
+                {/*        target={'_blank'}*/}
+                {/*      >*/}
+                {/*        <span className={'emoji'}>*/}
+                {/*          <TwitterLogoIcon />*/}
+                {/*        </span>{' '}*/}
+                {/*        Twitter*/}
+                {/*      </Link>*/}
+                {/*    </li>*/}
+                {/*  </ul>*/}
+                {/*</li>*/}
               </ul>
             </nav>
             <p className={'text-xs text-opacity-80 text-white'}>

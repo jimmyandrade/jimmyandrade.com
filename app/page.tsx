@@ -32,14 +32,12 @@ const Homepage = () => {
           >
             <div className={'card-content space-y-4'}>
               <p className={'text-center'}>
-                <cite>? (Dúvida)</cite>: nova versão de 2023
+                <cite>? (Dúvida)</cite>
               </p>
               <p>
                 <Link
                   className={'button bg-white text-black w-full'}
-                  href={'https://jimmyandrade.com/duvida'}
-                  rel={'noopener noreferrer'}
-                  target={'_blank'}
+                  href={'/duvida'}
                   title={'? (Dúvida)'}
                 >
                   Ouvir agora <ChevronRightIcon />
@@ -67,14 +65,13 @@ const Homepage = () => {
                 'before:bg-olive-50 before:bg-gradient-to-r before:from-sky-60 before:to-olive-50 before:rounded-2xl before:opacity-50 before:w-full before:h-full before:absolute before:pointer-events-none before:z-10'
               )}
             >
-              <p
-                className={
-                  'text-center pt-8 text-white md:text-md lg:text-lg xl:text-xl z-20'
-                }
-              >
-                <cite>Sincera/Mente</cite>, música nova dia{' '}
-                <time dateTime={'2023-06-27'}>27 de junho</time>:
-              </p>
+              {/*<p*/}
+              {/*  className={*/}
+              {/*    'text-center pt-8 text-white md:text-md lg:text-lg xl:text-xl z-20'*/}
+              {/*  }*/}
+              {/*>*/}
+              {/*  Música nova <time dateTime={'2023-06-27'}>27 de junho</time>:*/}
+              {/*</p>*/}
               <Countdown
                 className={'px-8 pt-8 pb-4 text-white z-20'}
                 data-datetime={'2023-06-27T00:00:00-03:00'}
@@ -85,12 +82,10 @@ const Homepage = () => {
                   'text-sm sm:text-base md:text-lg',
                   'py-2.5 px-3.5 z-30 m-2 sm:m-3 lg:m-4 xl:m-6'
                 )}
-                href={'https://onerpm.link/5461550308'}
-                rel={'noopener noreferrer'}
-                target={'_blank'}
+                href={'/sinceramente'}
                 title={'Sincera/Mente'}
               >
-                Faça o pré-save agora
+                Sincera/Mente: faça o pré-save
               </Link>
             </div>
             <GalleryImage
@@ -111,9 +106,7 @@ const Homepage = () => {
         <li className={'homepage-section'}>
           <Link
             className={'after:content-none'}
-            href={'https://onerpm.link/2307666704'}
-            rel={'noopener noreferrer'}
-            target={'_blank'}
+            href={'/o-que-me-faz-maior'}
             title={'O Que Me Faz Maior'}
           >
             <GalleryImage asChild={true} className={'aspect-square'}>
@@ -122,12 +115,7 @@ const Homepage = () => {
           </Link>
         </li>
         <li className={'homepage-section'}>
-          <Link
-            href={'https://onerpm.link/4494805323'}
-            rel={'noopener noreferrer'}
-            target={'_blank'}
-            title={'Um Plano'}
-          >
+          <Link href={'/um-plano'} title={'Um Plano'}>
             <Image
               alt={''}
               className={'select-none w-full'}

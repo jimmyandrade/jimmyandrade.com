@@ -38,6 +38,10 @@
   }
 
   /* Single elements */
+  cite {
+    @apply not-italic;
+  }
+
   dd {
     margin-inline: 0;
   }
@@ -137,7 +141,7 @@
   }
 
   .card {
-    @apply blurred-backdrop flex flex-col rounded-2xl shadow;
+    @apply blurred-backdrop flex flex-col min-w-[250px] rounded-2xl shadow;
   }
 
   .card-content {

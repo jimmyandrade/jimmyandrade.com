@@ -25,11 +25,6 @@ const nextConfig = {
   redirects: async () => {
     return [
       {
-        source: '/duvida',
-        destination: 'https://onerpm.link/8936683700',
-        permanent: false,
-      },
-      {
         source: '/manifest.json',
         destination: '/manifest.webmanifest',
         permanent: true,

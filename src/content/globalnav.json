@@ -1,16 +1,24 @@
 {
   "items": [
     {
-      "title": "Início",
+      "title": "Página inicial",
       "href": "/"
     },
     {
-      "title": "Loja",
-      "href": "/loja"
+      "title": "? (Dúvida)",
+      "href": "/duvida"
     },
     {
-      "title": "Imprensa",
-      "href": "/imprensa"
+      "title": "Sincera/Mente",
+      "href": "/sinceramente"
+    },
+    {
+      "title": "O Que Me Faz Maior",
+      "href": "/o-que-me-faz-maior"
+    },
+    {
+      "title": "Um Plano",
+      "href": "/um-plano"
     }
   ]
 }

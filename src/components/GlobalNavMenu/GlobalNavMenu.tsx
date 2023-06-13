@@ -99,7 +99,7 @@ export const GlobalNavMenu = forwardRef<HTMLElement, GlobalNavMenuProps>(
             className={classNames(
               'flex motion-safe:transition motion-safe:ease-out motion-safe:duration-100',
               'text-xs flex-col gap-y-3.5 ml-3.5 py-3.5',
-              'sm:text-sm sm:flex-row sm:gap-x-4 py-4',
+              'sm:text-sm sm:gap-x-4 py-4',
               {
                 'h-0 opacity-0 pointer-events-none': !isMenuOpen,
                 'h-auto opacity-100 pointer-events-auto': isMenuOpen,
