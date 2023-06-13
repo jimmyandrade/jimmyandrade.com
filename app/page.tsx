@@ -23,7 +23,9 @@ const Homepage = () => {
       <h1 className={'sr-only'}>Página inicial</h1>
       <ul className={'lg:grid lg:grid-cols-2'}>
         <li
-          className={'homepage-section col-span-2 lg:h-screen lg:max-h-screen'}
+          className={
+            'homepage-section col-span-2 lg:h-screen lg:max-h-screen mt-12'
+          }
         >
           <div
             className={
@@ -31,8 +33,9 @@ const Homepage = () => {
             }
           >
             <div className={'card-content space-y-4'}>
-              <p className={'text-center'}>
-                <cite>? (Dúvida)</cite>
+              <p className={'text-center text-sm'}>
+                <cite>? (Dúvida)</cite> versão{' '}
+                <time dateTime={'2023'}>2023</time>
               </p>
               <p>
                 <Link
@@ -85,7 +88,7 @@ const Homepage = () => {
                 href={'/sinceramente'}
                 title={'Sincera/Mente'}
               >
-                Sincera/Mente: faça o pré-save
+                Sincera/Mente: faça o pré-save <ChevronRightIcon />
               </Link>
             </div>
             <GalleryImage
