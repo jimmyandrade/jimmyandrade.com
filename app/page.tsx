@@ -21,16 +21,17 @@ const Homepage = () => {
   return (
     <article className={'home mx-auto w-full'}>
       <h1 className={'sr-only'}>Página inicial</h1>
-      <ul className={'lg:grid lg:grid-cols-2'}>
+      <ul className={'lg:grid lg:grid-cols-2 pt-12 bg-grape-40'}>
         <li
           className={
-            'homepage-section col-span-2 lg:h-screen lg:max-h-screen mt-12'
+            'homepage-section col-span-2 xl:col-span-1 lg:h-screen lg:max-h-screen'
           }
         >
           <div
-            className={
-              'bg-grape-40 bg-opacity-60 card absolute-center bottom-2 text-white'
-            }
+            className={classNames(
+              'bg-grape-40 bg-opacity-60 card absolute-center text-white',
+              'bottom-4 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16'
+            )}
           >
             <div className={'card-content space-y-4'}>
               <p className={'text-center text-sm'}>
@@ -52,19 +53,21 @@ const Homepage = () => {
             alt={
               'Jimmy Andrade usa cabelo rosa e está sorrindo para o lado. Atrás dele, um fundo rosa com balões em tons de rosa.'
             }
-            className={'select-none w-full'}
+            className={'lg:object-cover lg:object-top lg:h-screen w-full'}
             draggable={false}
             src={duvidaImage}
           />
         </li>
         <li
-          className={'homepage-section col-span-2 lg:h-screen lg:max-h-screen'}
+          className={
+            'homepage-section col-span-2 lg:h-screen lg:max-h-screen xl:col-span-1'
+          }
         >
           <div>
             <div
               className={classNames(
                 'card absolute-center',
-                'bottom-0 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16',
+                'bottom-4 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16',
                 'before:bg-olive-50 before:bg-gradient-to-r before:from-sky-60 before:to-olive-50 before:rounded-2xl before:opacity-50 before:w-full before:h-full before:absolute before:pointer-events-none before:z-10'
               )}
             >
@@ -94,7 +97,7 @@ const Homepage = () => {
             <GalleryImage
               asChild={true}
               className={
-                'aspect-square lg:object-cover lg:object-center lg:h-screen'
+                'aspect-square lg:object-cover lg:object-bottom lg:h-screen'
               }
             >
               <Image
