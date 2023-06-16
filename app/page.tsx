@@ -10,6 +10,7 @@ import { Countdown } from '../src/components/Countdown/Countdown';
 import { GalleryImage } from '../src/components/GalleryImage/GalleryImage';
 import classNames from 'classnames';
 import { ChevronRightIcon } from '@radix-ui/react-icons';
+import { songToggle } from '../src/constants';
 
 export const metadata = {
   alternates: {
@@ -23,9 +24,10 @@ const Homepage = () => {
       <h1 className={'sr-only'}>Página inicial</h1>
       <ul className={'lg:grid lg:grid-cols-2 pt-12 bg-grape-40'}>
         <li
-          className={
-            'homepage-section col-span-2 xl:col-span-1 lg:h-screen lg:max-h-screen'
-          }
+          className={classNames(
+            'homepage-section xl:col-span-1 lg:max-h-screen',
+            'col-span-2 lg:h-screen'
+          )}
         >
           <div
             className={classNames(
@@ -58,64 +60,76 @@ const Homepage = () => {
             src={duvidaImage}
           />
         </li>
-        <li
-          className={
-            'homepage-section col-span-2 lg:h-screen lg:max-h-screen xl:col-span-1'
-          }
-        >
-          <div>
-            <div
-              className={classNames(
-                'card absolute-center',
-                'bottom-4 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16',
-                'before:bg-olive-50 before:bg-gradient-to-r before:from-sky-60 before:to-olive-50 before:rounded-2xl before:opacity-50 before:w-full before:h-full before:absolute before:pointer-events-none before:z-10'
-              )}
-            >
-              {/*<p*/}
-              {/*  className={*/}
-              {/*    'text-center pt-8 text-white md:text-md lg:text-lg xl:text-xl z-20'*/}
-              {/*  }*/}
-              {/*>*/}
-              {/*  Música nova <time dateTime={'2023-06-27'}>27 de junho</time>:*/}
-              {/*</p>*/}
-              <Countdown
-                className={'px-8 pt-8 pb-4 text-white z-20'}
-                data-datetime={'2023-06-27T00:00:00-03:00'}
-              />
-              <Link
+        {songToggle.sinceramente && (
+          <li
+            className={
+              'homepage-section col-span-2 lg:h-screen lg:max-h-screen xl:col-span-1'
+            }
+          >
+            <div>
+              <div
                 className={classNames(
-                  'button bg-white text-black',
-                  'text-sm sm:text-base md:text-lg',
-                  'py-2.5 px-3.5 z-30 m-2 sm:m-3 lg:m-4 xl:m-6'
+                  'card absolute-center',
+                  'bottom-4 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16',
+                  'before:bg-olive-50 before:bg-gradient-to-r before:from-sky-60 before:to-olive-50 before:rounded-2xl before:opacity-50 before:w-full before:h-full before:absolute before:pointer-events-none before:z-10'
                 )}
-                href={'/sinceramente'}
-                title={'Sincera/Mente'}
               >
-                Sincera/Mente: faça o pré-save <ChevronRightIcon />
-              </Link>
-            </div>
-            <GalleryImage
-              asChild={true}
-              className={
-                'aspect-square lg:object-cover lg:object-bottom lg:h-screen'
-              }
-            >
-              <Image
-                alt={
-                  'Jimmy Andrade se apoiando em alguns catálogos telefônicos antigos e olhando para a câmera'
+                <p
+                  className={
+                    'text-center pt-8 text-white md:text-md lg:text-lg xl:text-xl z-20'
+                  }
+                >
+                  Música nova <time dateTime={'2023-06-27'}>27 de junho</time>:
+                </p>
+                <Countdown
+                  className={'px-8 pt-8 pb-4 text-white z-20'}
+                  data-datetime={'2023-06-27T00:00:00-03:00'}
+                />
+                <Link
+                  className={classNames(
+                    'button bg-white text-black',
+                    'text-sm sm:text-base md:text-lg',
+                    'py-2.5 px-3.5 z-30 m-2 sm:m-3 lg:m-4 xl:m-6'
+                  )}
+                  href={'/sinceramente'}
+                  title={'Sincera/Mente'}
+                >
+                  Sincera/Mente: faça o pré-save <ChevronRightIcon />
+                </Link>
+              </div>
+              <GalleryImage
+                asChild={true}
+                className={
+                  'aspect-square lg:object-cover lg:object-bottom lg:h-screen'
                 }
-                src={sinceraMenteImage}
-              />
-            </GalleryImage>
-          </div>
-        </li>
-        <li className={'homepage-section'}>
+              >
+                <Image
+                  alt={
+                    'Jimmy Andrade se apoiando em alguns catálogos telefônicos antigos e olhando para a câmera'
+                  }
+                  src={sinceraMenteImage}
+                />
+              </GalleryImage>
+            </div>
+          </li>
+        )}
+        <li
+          className={classNames(
+            'homepage-section xl:col-span-1 lg:max-h-screen',
+            'col-span-2 lg:h-screen'
+          )}
+        >
           <Link
             className={'after:content-none'}
             href={'/o-que-me-faz-maior'}
             title={'O Que Me Faz Maior'}
           >
-            <GalleryImage asChild={true} className={'aspect-square'}>
+            <GalleryImage
+              asChild={true}
+              className={
+                'aspect-square lg:object-cover lg:object-left lg:h-screen w-full'
+              }
+            >
               <Image alt={''} src={oQueMeFazMaiorImage} />
             </GalleryImage>
           </Link>
@@ -144,20 +158,22 @@ const Homepage = () => {
             />
           </Link>
         </li>
-        <li className={'homepage-section'}>
-          <Link
-            href={'https://onerpm.link/9875483203'}
-            rel={'noopener noreferrer'}
-            target={'_blank'}
-            title={'Insensível'}
-          >
-            <Image
-              alt={''}
-              src={insensivelImage}
-              className={'select-none w-full'}
-            />
-          </Link>
-        </li>
+        {songToggle.insensivel && (
+          <li className={'homepage-section'}>
+            <Link
+              href={'https://onerpm.link/9875483203'}
+              rel={'noopener noreferrer'}
+              target={'_blank'}
+              title={'Insensível'}
+            >
+              <Image
+                alt={''}
+                src={insensivelImage}
+                className={'select-none w-full'}
+              />
+            </Link>
+          </li>
+        )}
       </ul>
     </article>
   );

@@ -26,3 +26,8 @@ export const description =
 export const twitterHandle = '@jimmyandrade';
 export const defaultLanguage = 'pt-br';
 export const baseURL = 'https://jimmyandrade.com';
+
+export const songToggle = {
+  insensivel: false,
+  sinceramente: false,
+};
