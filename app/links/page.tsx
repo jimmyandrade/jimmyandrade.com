@@ -10,18 +10,20 @@ const LinksPage = () => (
     }
     id={'links-page'}
   >
-    <header className={'flex flex-col items-center gap-y-4'}>
-      <Image
-        alt={
-          'Jimmy Andrade, uma pessoa com cabelo rosa e barba, canta em um microfone clássico'
-        }
-        className={'rounded-full select-none w-24 h-24'}
-        draggable={false}
-        height={176}
-        src={'/media/avatars/jimmy-andrade-duvida.jpeg'}
-        width={176}
-      />
-      <Wordmark />
+    <header>
+      <Link className={'flex flex-col items-center gap-y-4'} href={'/'}>
+        <Image
+          alt={
+            'Jimmy Andrade, uma pessoa com cabelo rosa e barba, canta em um microfone clássico'
+          }
+          className={'rounded-full select-none w-24 h-24'}
+          draggable={false}
+          height={176}
+          src={'/media/avatars/jimmy-andrade-duvida.jpeg'}
+          width={176}
+        />
+        <Wordmark />
+      </Link>
     </header>
     <h2 className={'sr-only'}>Links</h2>
     <ul className={'flex flex-col gap-y-2'}>
