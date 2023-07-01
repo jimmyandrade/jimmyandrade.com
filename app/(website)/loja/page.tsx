@@ -1,6 +1,6 @@
-import { Container } from '../../src/lib/components/Container';
-import { PageHeading } from '../../src/components/PageHeading/PageHeading';
-import { PageHeader } from '../../src/components/PageHeader/PageHeader';
+import { Container } from '../../../src/lib/components/Container';
+import { PageHeading } from '../../../src/components/PageHeading/PageHeading';
+import { PageHeader } from '../../../src/components/PageHeader/PageHeader';
 
 export const metadata = {
   title: 'Loja',
@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 const StorePage = () => (
-  <Container>
+  <Container id={'store-page'}>
     <PageHeader>
       <PageHeading>Loja</PageHeading>
     </PageHeader>

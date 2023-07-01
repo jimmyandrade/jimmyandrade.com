@@ -3,6 +3,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
     "baseUrl": ".",
     "declaration": false,
     "emitDecoratorMetadata": true,

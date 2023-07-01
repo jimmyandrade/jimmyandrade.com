@@ -129,7 +129,7 @@
   }
 
   .button {
-    @apply bg-opacity-100 border-0 button-base font-semibold font-sans hover:bg-opacity-80 rounded-xl shadow text-center touchable active:shadow-none;
+    @apply bg-opacity-100 border-0 button-base font-semibold font-sans focus-visible:bg-opacity-80 hover:bg-opacity-80 rounded-xl shadow text-center touchable active:shadow-none;
   }
 
   .homepage-section {

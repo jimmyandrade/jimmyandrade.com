@@ -10,7 +10,10 @@ export interface GalleryImageProps
 }
 
 export const GalleryImage = forwardRef<HTMLImageElement, GalleryImageProps>(
-  ({ alt, asChild = false, className, draggable = false, ...props }) => {
+  (
+    { alt, asChild = false, className, draggable = false, ...props },
+    forwardedRef
+  ) => {
     const Component = asChild ? Slot : 'img';
 
     return (
@@ -19,6 +22,7 @@ export const GalleryImage = forwardRef<HTMLImageElement, GalleryImageProps>(
         className={classNames('w-full z-10', className)}
         draggable={draggable}
         {...props}
+        ref={forwardedRef}
       />
     );
   }

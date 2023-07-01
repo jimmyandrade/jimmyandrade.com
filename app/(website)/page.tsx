@@ -1,16 +1,10 @@
 import Image from 'next/image';
-import duvidaImage from '../public/media/songs/duvida/jimmy-andrade-duvida-versao-2023.png';
-import umPlanoImage from '../public/media/songs/um-plano/um-plano-2023-com-texto.png';
-import oQueMeFazMaiorImage from '../public/media/songs/o-que-me-faz-maior/encarte-promocional.png';
-import sinceraMenteImage from '../public/media/songs/sincera-mente/capa-do-single-sincera-mente.jpg';
-import insensivelImage from '../public/media/songs/insensivel/insensivel-onerpm.jpg';
-import maisUmaVozImage from '../public/media/songs/mais-uma-voz/mais-uma-voz.png';
 import Link from 'next/link';
-import { Countdown } from '../src/components/Countdown/Countdown';
-import { GalleryImage } from '../src/components/GalleryImage/GalleryImage';
+import { Countdown } from '../../src/components/Countdown/Countdown';
+import { GalleryImage } from '../../src/components/GalleryImage/GalleryImage';
 import classNames from 'classnames';
 import { ChevronRightIcon } from '@radix-ui/react-icons';
-import { songToggle } from '../src/constants';
+import { songToggle } from '../../src/constants';
 
 export const metadata = {
   alternates: {
@@ -20,7 +14,7 @@ export const metadata = {
 
 const Homepage = () => {
   return (
-    <article className={'home mx-auto w-full'}>
+    <article id={'home-page'} className={'home mx-auto w-full'}>
       <h1 className={'sr-only'}>Página inicial</h1>
       <ul className={'lg:grid lg:grid-cols-2 pt-12 bg-grape-40'}>
         <li
@@ -53,11 +47,13 @@ const Homepage = () => {
           </div>
           <Image
             alt={
-              'Jimmy Andrade usa cabelo rosa e está sorrindo para o lado. Atrás dele, um fundo rosa com balões em tons de rosa.'
+              'Jimmy Andrade usa cabelo rosa, barba e está segurando um microfone. Atrás dele, um fundo rosa.'
             }
             className={'lg:object-cover lg:object-top lg:h-screen w-full'}
             draggable={false}
-            src={duvidaImage}
+            height={1152}
+            src={'/media/songs/duvida/duvida-youtube-banner-image.jpg'}
+            width={2048}
           />
         </li>
         {songToggle.sinceramente && (
@@ -107,7 +103,9 @@ const Homepage = () => {
                   alt={
                     'Jimmy Andrade se apoiando em alguns catálogos telefônicos antigos e olhando para a câmera'
                   }
-                  src={sinceraMenteImage}
+                  src={
+                    '/media/songs/sincera-mente/capa-do-single-sincera-mente.jpg'
+                  }
                 />
               </GalleryImage>
             </div>
@@ -130,17 +128,28 @@ const Homepage = () => {
                 'aspect-square lg:object-cover lg:object-left lg:h-screen w-full'
               }
             >
-              <Image alt={''} src={oQueMeFazMaiorImage} />
+              <Image
+                alt={
+                  'Jimmy Andrade está de cabelo roxo e barba em um estúdio fotográfico. No lado direito, o texto "O Que Me Faz Maior"'
+                }
+                height={1080}
+                src={'/media/songs/o-que-me-faz-maior/encarte-promocional.png'}
+                width={1080}
+              />
             </GalleryImage>
           </Link>
         </li>
         <li className={'homepage-section'}>
           <Link href={'/um-plano'} title={'Um Plano'}>
             <Image
-              alt={''}
+              alt={
+                'Jimmy Andrade usa cabelos escuros e barba e está em uma biblioteca escura. Seu rosto é iluminado por luzes nas cores rosa e azul. Uma letra U está em frente ao seu rosto. Do lado direito, os textos "Um Plano" e "Jimmy Andrade"'
+              }
               className={'select-none w-full'}
               draggable={false}
-              src={umPlanoImage}
+              height={3008}
+              src={'/media/songs/um-plano/um-plano-2023-com-texto.png'}
+              width={3008}
             />
           </Link>
         </li>
@@ -152,9 +161,13 @@ const Homepage = () => {
             title={'Mais Uma Voz (feat. Pabllo Vittar)'}
           >
             <Image
-              alt={''}
+              alt={
+                'Pabllo Vittar e Jimmy Andrade em um estúdio fotográfico com o fundo amarelo'
+              }
               className={'select-none w-full'}
-              src={maisUmaVozImage}
+              height={1920}
+              src={'/media/songs/mais-uma-voz/mais-uma-voz.png'}
+              width={1920}
             />
           </Link>
         </li>
@@ -168,7 +181,7 @@ const Homepage = () => {
             >
               <Image
                 alt={''}
-                src={insensivelImage}
+                src={'../public/media/songs/insensivel/insensivel-onerpm.jpg'}
                 className={'select-none w-full'}
               />
             </Link>

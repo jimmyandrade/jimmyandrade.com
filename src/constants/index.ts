@@ -1,5 +1,6 @@
 export const contentAnchorName = 'content';
 export const appName = 'Jimmy Andrade';
+export const companyName = 'Jimmy Andrade Música e Publicidade Digital';
 
 export const keywordsArray = [
   appName,
