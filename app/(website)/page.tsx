@@ -51,9 +51,10 @@ const Homepage = () => {
             }
             className={'lg:object-cover lg:object-top lg:h-screen w-full'}
             draggable={false}
-            height={1152}
-            src={'/media/songs/duvida/duvida-youtube-banner-image.jpg'}
-            width={2048}
+            height={3000}
+            priority={true}
+            src={'/media/songs/duvida/capa-duvida-2023.jpg'}
+            width={3000}
           />
         </li>
         {songToggle.sinceramente && (
