@@ -25,24 +25,24 @@ const LinksPage = () => (
         <Wordmark />
       </Link>
     </header>
-    <h2>Ingressos</h2>
-    <ul className={'flex flex-col gap-y-2'}>
-      <li>
-        <Link
-          className={'button w-full px-4 bg-white text-grape-40'}
-          href={
-            'https://www.sympla.com.br/sua-festa-julina-no-seu-trem__2015346?token=781cde4a8210cd2e39484632c410e806'
-          }
-          rel={'noopener noreferrer'}
-          target={'_blank'}
-        >
-          <span>
-            🎟️ <time dateTime={'2023-07-23 20:30'}>23/07 20:30</time>: Festa
-            Julina do Seu Trem
-          </span>
-        </Link>
-      </li>
-    </ul>
+    {/*<h2>Ingressos</h2>*/}
+    {/*<ul className={'flex flex-col gap-y-2'}>*/}
+    {/*  <li>*/}
+    {/*    <Link*/}
+    {/*      className={'button w-full px-4 bg-white text-grape-40'}*/}
+    {/*      href={*/}
+    {/*        'https://www.sympla.com.br/sua-festa-julina-no-seu-trem__2015346?token=781cde4a8210cd2e39484632c410e806'*/}
+    {/*      }*/}
+    {/*      rel={'noopener noreferrer'}*/}
+    {/*      target={'_blank'}*/}
+    {/*    >*/}
+    {/*      <span>*/}
+    {/*        🎟️ <time dateTime={'2023-07-23 20:30'}>23/07 20:30</time>: Festa*/}
+    {/*        Julina do Seu Trem*/}
+    {/*      </span>*/}
+    {/*    </Link>*/}
+    {/*  </li>*/}
+    {/*</ul>*/}
     <h2>Links</h2>
     <ul className={'flex flex-col gap-y-2'}>
       <li>
