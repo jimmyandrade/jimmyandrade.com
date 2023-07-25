@@ -43,7 +43,7 @@ const LinksPage = () => (
     {/*    </Link>*/}
     {/*  </li>*/}
     {/*</ul>*/}
-    <h2>Links</h2>
+    <h2 className={'sr-only'}>Links</h2>
     <ul className={'flex flex-col gap-y-2'}>
       <li>
         <Link
