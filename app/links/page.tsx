@@ -141,10 +141,10 @@ const LinksPage = () => (
       <li>
         <Link
           className={'button w-full px-4 bg-white text-grape-40'}
-          href={'https://twitter.com/jimmyandrade'}
-          title={'Twitter'}
+          href={'https://x.com/jimmyandrade'}
+          title={'𝕏'}
         >
-          🐦 Twitter
+          𝕏 (Twitter)
         </Link>
       </li>
       <li>
