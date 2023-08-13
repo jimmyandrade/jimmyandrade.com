@@ -12,10 +12,14 @@ const LinksPage = () => (
     id={'links-page'}
   >
     <header>
-      <Link className={'flex flex-col items-center gap-y-4'} href={'/'}>
+      <Link
+        className={'flex flex-col items-center gap-y-4'}
+        href={'/'}
+        target={'_self'}
+      >
         {/*<Image*/}
         {/*  alt={*/}
-        {/*    'Jimmy Andrade, uma pessoa com cabelo rosa e barba, canta em um microfone clássico'*/}
+        {/*    ''*/}
         {/*  }*/}
         {/*  className={'rounded-full select-none w-24 h-24'}*/}
         {/*  draggable={false}*/}
@@ -29,7 +33,9 @@ const LinksPage = () => (
     <section>
       <LatestReleaseCard className={'min-w-[300px]'}>
         <Image
-          alt={'Capa do single "? (Dúvida)"'}
+          alt={
+            'Jimmy Andrade, uma pessoa com cabelo rosa e barba, canta em um microfone clássico na capa do single "? (Dúvida)"'
+          }
           height={300}
           src={'/media/songs/duvida/capa-duvida-2023.jpg'}
           width={300}
@@ -44,6 +50,7 @@ const LinksPage = () => (
             className={'links-section-button'}
             href={'https://www.youtube.com/watch?v=ZvFQVMGsfgI'}
             title={'Assistir "? (Dúvida)"'}
+            target={'_blank'}
           >
             📺&nbsp;<cite>? (Dúvida)</cite>
           </Link>
@@ -52,6 +59,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://www.youtube.com/watch?v=-huz-hZxmvM'}
+            target={'_blank'}
             title={'Assistir "Mais Uma Voz (feat. Pabllo Vittar)"'}
           >
             📺&nbsp;
@@ -64,6 +72,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://youtube.com/jimmyandrade'}
+            target={'_blank'}
             title={'YouTube'}
           >
             ▶️ Canal no YouTube
@@ -80,6 +89,7 @@ const LinksPage = () => (
             href={
               'https://open.spotify.com/playlist/4gEHuLcJegImyunC9prd1D?si=f24a8cd2fb314300'
             }
+            target={'_blank'}
             title={'Playlist This is Jimmy Andrade no Spotify'}
           >
             <span>
@@ -98,6 +108,7 @@ const LinksPage = () => (
             href={
               'https://open.spotify.com/playlist/79fn9QtKRCKJpvGSAJCxZd?si=a743fcdbbeb44060'
             }
+            target={'_blank'}
             title={'Playlist Orgulho Mineiro'}
           >
             <span role={'img'}>🏳️‍🌈&nbsp;</span> Orgulho Mineiro
@@ -109,9 +120,10 @@ const LinksPage = () => (
             href={
               'https://open.spotify.com/intl-pt/artist/5cXCuau8jCVmsRoFYj5oGB?si=-kUn9lPiQIaVoBiFEVHOsA'
             }
+            target={'_blank'}
             title={'Spotify'}
           >
-            🎵 Jimmy Andrade no Spotify
+            🎵 Me siga no Spotify
           </Link>
         </li>
         {/*<li>*/}
@@ -138,6 +150,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://www.deezer.com/br/artist/4899713'}
+            target={'_blank'}
             title={'Deezer'}
           >
             🎵 Deezer
@@ -147,6 +160,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://music.apple.com/br/artist/jimmy-andrade/678083982'}
+            target={'_blank'}
             title={'Apple Music'}
           >
             🎵 Apple Music
@@ -158,6 +172,7 @@ const LinksPage = () => (
             href={
               'https://music.amazon.com.br/artists/B00HT9E0C4/jimmy-andrade'
             }
+            target={'_blank'}
             title={'Amazon Music'}
           >
             🎵 Amazon Music
@@ -172,6 +187,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://instagram.com/jimmyandrade'}
+            target={'_blank'}
             title={'Instagram'}
           >
             📷 Instagram
@@ -181,6 +197,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://www.threads.net/@jimmyandrade'}
+            target={'_blank'}
             title={'Threads'}
           >
             🧵 Threads
@@ -190,6 +207,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://tiktok.com/@jimmyandrademusic'}
+            target={'_blank'}
             title={'TikTok'}
           >
             📹 TikTok
@@ -204,6 +222,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://chat.whatsapp.com/Lf2lq4rBbMX2yWjbAyaa2Q'}
+            target={'_blank'}
             title={'Comunidade no WhatsApp'}
           >
             💬 Comunidade no WhatsApp
@@ -213,6 +232,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://t.me/+xcKd-SaXUT0zY2Q5'}
+            target={'_blank'}
             title={'Canal no Telegram'}
           >
             💬 Canal no Telegram
@@ -222,6 +242,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'/'}
+            target={'_self'}
             title={'JimmyAndrade.com'}
           >
             🏠 JimmyAndrade.com
