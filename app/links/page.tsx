@@ -117,7 +117,7 @@ const LinksPage = () => (
             target={'_blank'}
             title={'Playlist Orgulho Mineiro'}
           >
-            <span role={'img'}>🏳️‍🌈&nbsp;</span> Orgulho Mineiro
+            <span role={'img'}>🏳️‍🌈&nbsp;</span> Playlist Orgulho Mineiro
           </Link>
         </li>
         <li>
