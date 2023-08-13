@@ -15,6 +15,7 @@ const LinksPage = () => (
       <Link
         className={'flex flex-col items-center gap-y-4'}
         href={'/'}
+        rel={'home'}
         target={'_self'}
       >
         {/*<Image*/}
@@ -49,6 +50,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://www.youtube.com/watch?v=ZvFQVMGsfgI'}
+            rel={'noopener noreferrer'}
             title={'Assistir "? (Dúvida)"'}
             target={'_blank'}
           >
@@ -59,6 +61,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://www.youtube.com/watch?v=-huz-hZxmvM'}
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Assistir "Mais Uma Voz (feat. Pabllo Vittar)"'}
           >
@@ -72,6 +75,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://youtube.com/jimmyandrade'}
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'YouTube'}
           >
@@ -89,6 +93,7 @@ const LinksPage = () => (
             href={
               'https://open.spotify.com/playlist/4gEHuLcJegImyunC9prd1D?si=f24a8cd2fb314300'
             }
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Playlist This is Jimmy Andrade no Spotify'}
           >
@@ -108,6 +113,7 @@ const LinksPage = () => (
             href={
               'https://open.spotify.com/playlist/79fn9QtKRCKJpvGSAJCxZd?si=a743fcdbbeb44060'
             }
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Playlist Orgulho Mineiro'}
           >
@@ -120,6 +126,7 @@ const LinksPage = () => (
             href={
               'https://open.spotify.com/intl-pt/artist/5cXCuau8jCVmsRoFYj5oGB?si=-kUn9lPiQIaVoBiFEVHOsA'
             }
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Spotify'}
           >
@@ -150,6 +157,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://www.deezer.com/br/artist/4899713'}
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Deezer'}
           >
@@ -160,6 +168,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://music.apple.com/br/artist/jimmy-andrade/678083982'}
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Apple Music'}
           >
@@ -172,6 +181,7 @@ const LinksPage = () => (
             href={
               'https://music.amazon.com.br/artists/B00HT9E0C4/jimmy-andrade'
             }
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Amazon Music'}
           >
@@ -187,6 +197,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://instagram.com/jimmyandrade'}
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Instagram'}
           >
@@ -197,6 +208,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://www.threads.net/@jimmyandrade'}
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Threads'}
           >
@@ -207,6 +219,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://tiktok.com/@jimmyandrademusic'}
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'TikTok'}
           >
@@ -222,6 +235,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://chat.whatsapp.com/Lf2lq4rBbMX2yWjbAyaa2Q'}
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Comunidade no WhatsApp'}
           >
@@ -232,6 +246,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'https://t.me/+xcKd-SaXUT0zY2Q5'}
+            rel={'noopener noreferrer'}
             target={'_blank'}
             title={'Canal no Telegram'}
           >
@@ -242,6 +257,7 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={'/'}
+            rel={'home'}
             target={'_self'}
             title={'JimmyAndrade.com'}
           >
