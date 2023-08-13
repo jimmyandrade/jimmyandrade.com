@@ -5,6 +5,7 @@ import { GalleryImage } from '../../src/components/GalleryImage/GalleryImage';
 import classNames from 'classnames';
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 import { songToggle } from '../../src/constants';
+import { LatestReleaseCard } from '../../src/components/LatestReleaseCard/LatestReleaseCard';
 
 export const metadata = {
   alternates: {
@@ -20,31 +21,10 @@ const Homepage = () => {
         <li
           className={classNames(
             'homepage-section xl:col-span-1 lg:max-h-screen',
-            'col-span-2 lg:h-screen'
+            'col-span-2 lg:h-screen',
           )}
         >
-          <div
-            className={classNames(
-              'bg-grape-40 bg-opacity-60 card absolute-center text-white',
-              'bottom-4 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16'
-            )}
-          >
-            <div className={'card-content space-y-4'}>
-              <p className={'text-center text-sm'}>
-                <cite>? (Dúvida)</cite> versão{' '}
-                <time dateTime={'2023'}>2023</time>
-              </p>
-              <p>
-                <Link
-                  className={'button bg-white text-black w-full'}
-                  href={'/duvida'}
-                  title={'? (Dúvida)'}
-                >
-                  Ouvir agora <ChevronRightIcon />
-                </Link>
-              </p>
-            </div>
-          </div>
+          <LatestReleaseCard className={'absolute-center'} />
           <Image
             alt={
               'Jimmy Andrade usa cabelo rosa, barba e está segurando um microfone. Atrás dele, um fundo rosa.'
@@ -68,7 +48,7 @@ const Homepage = () => {
                 className={classNames(
                   'card absolute-center',
                   'bottom-4 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16',
-                  'before:bg-olive-50 before:bg-gradient-to-r before:from-sky-60 before:to-olive-50 before:rounded-2xl before:opacity-50 before:w-full before:h-full before:absolute before:pointer-events-none before:z-10'
+                  'before:bg-olive-50 before:bg-gradient-to-r before:from-sky-60 before:to-olive-50 before:rounded-2xl before:opacity-50 before:w-full before:h-full before:absolute before:pointer-events-none before:z-10',
                 )}
               >
                 <p
@@ -86,7 +66,7 @@ const Homepage = () => {
                   className={classNames(
                     'button bg-white text-black',
                     'text-sm sm:text-base md:text-lg',
-                    'py-2.5 px-3.5 z-30 m-2 sm:m-3 lg:m-4 xl:m-6'
+                    'py-2.5 px-3.5 z-30 m-2 sm:m-3 lg:m-4 xl:m-6',
                   )}
                   href={'/sinceramente'}
                   title={'Sincera/Mente'}
@@ -115,7 +95,7 @@ const Homepage = () => {
         <li
           className={classNames(
             'homepage-section xl:col-span-1 lg:max-h-screen',
-            'col-span-2 lg:h-screen'
+            'col-span-2 lg:h-screen',
           )}
         >
           <Link

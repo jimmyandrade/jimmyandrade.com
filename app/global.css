@@ -147,6 +147,10 @@
   .card-content {
     @apply p-8;
   }
+
+  .links-section-button {
+    @apply button w-full px-4 bg-white text-grape-40 min-w-[300px] justify-start;
+  }
 }
 
 /*.offline-title, .offline-text {*/

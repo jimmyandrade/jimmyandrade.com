@@ -12,13 +12,13 @@ export const Wordmark = forwardRef<HTMLElement, WordmarkProps>(
     const Component = asChild ? Slot : 'strong';
     return (
       <Component
-        className={classNames('font-semibold uppercase', className)}
+        className={classNames('font-semibold', className)}
         {...props}
         ref={forwardedRef}
       >
         Jimmy&nbsp;Andrade
       </Component>
     );
-  }
+  },
 );
 Wordmark.displayName = 'Wordmark';
