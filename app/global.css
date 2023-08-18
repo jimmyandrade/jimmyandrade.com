@@ -37,7 +37,17 @@
     @apply font-normal;
   }
 
-  /* Single elements */
+  /* Single heading elements */
+  h1 {
+    @apply leading-[100px] text-base;
+  }
+
+  h3 {
+    @apply mt-7 mb-6;
+  }
+
+  /* Another single elements */
+
   cite {
     @apply not-italic;
   }
@@ -80,6 +90,11 @@
 
 /* Small, single-purpose classes that take precedence over other styles */
 @layer utilities {
+
+  abbr.initialism {
+    @apply no-underline;
+  }
+
   .bg-duvida {
     @apply from-lavender-70 to-grape-40;
   }
@@ -151,6 +166,14 @@
   .links-section-button {
     @apply button w-full px-4 bg-white text-grape-40 min-w-[300px] justify-start;
   }
+
+  .footer {
+    @apply border-collapse mt-0 mb-0;
+  }
+
+  .footer p {
+    @apply text-xs;
+  }
 }
 
 /*.offline-title, .offline-text {*/
@@ -204,18 +227,13 @@
 /*  position: relative;*/
 /*}*/
 
-/*h2, h3, h4, .jumbotron p.display-4 {*/
+/*h2, h3, .jumbotron p.display-4 {*/
 /*  font-family: 'Zilla Slab', serif;*/
 /*}*/
 
-/*h3 {*/
-/*  margin-top: 1.75rem;*/
-/*  margin-bottom: 1.5rem;*/
-/*}*/
 
-/*h2 abbr.initialism {*/
-/*  text-decoration: none;*/
-/*}*/
+
+
 
 /*.overlay {*/
 /*  bottom: 0;*/
@@ -410,11 +428,6 @@
 /*.bg-black {*/
 /*  background-color: #000000;*/
 /*}*/
-
-/*h1 {*/
-/*  font-size: 1rem;*/
-/*}*/
-
 /*h1 {*/
 /*  line-height: 100px;*/
 /*}*/
@@ -474,16 +487,6 @@
 /*.card a.call-to-action:hover, .card:hover span.call-to-action {*/
 /*  background-color: #443b8c !important;*/
 /*  color: #FFFFFF;*/
-/*}*/
-
-/*.footer {*/
-/*  border-collapse: collapse;*/
-/*  margin-top: 0px;*/
-/*  margin-bottom: 0px;*/
-/*}*/
-
-/*.footer p {*/
-/*  font-size: 0.75rem;*/
 /*}*/
 
 /*.sr-only-focusable:focus {*/

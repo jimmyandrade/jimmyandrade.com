@@ -1,6 +1,6 @@
 import { Container } from '../../../src/lib/components/Container';
-import { PageHeading } from '../../../src/components/PageHeading/PageHeading';
-import { PageHeader } from '../../../src/components/PageHeader/PageHeader';
+import { PageHeading } from '../../../src/components/PageHeading';
+import { PageHeader } from '../../../src/components/PageHeader';
 
 export const metadata = {
   title: 'Imprensa',
