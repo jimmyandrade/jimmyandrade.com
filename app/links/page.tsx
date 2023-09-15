@@ -218,7 +218,7 @@ const LinksPage = () => (
         <li>
           <Link
             className={'links-section-button'}
-            href={'https://tiktok.com/@jimmyandrademusic'}
+            href={'https://vm.tiktok.com/ZMj6qenS3/'}
             rel={'noopener noreferrer'}
             target={'_blank'}
             title={'TikTok'}
