@@ -234,6 +234,17 @@ const LinksPage = () => (
         <li>
           <Link
             className={'links-section-button'}
+            href={'https://www.cameo.com/jimmyandrade'}
+            rel={'noopener noreferrer'}
+            target={'_blank'}
+            title={'Cameo: encomende músicas e vídeos'}
+          >
+            📹 Cameo: encomende músicas e vídeos
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={'links-section-button'}
             href={'https://chat.whatsapp.com/Lf2lq4rBbMX2yWjbAyaa2Q'}
             rel={'noopener noreferrer'}
             target={'_blank'}
