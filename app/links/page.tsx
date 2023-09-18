@@ -237,9 +237,9 @@ const LinksPage = () => (
             href={'https://www.cameo.com/jimmyandrade'}
             rel={'noopener noreferrer'}
             target={'_blank'}
-            title={'Cameo: encomende músicas e vídeos'}
+            title={'Cameo: encomende vídeos'}
           >
-            📹 Cameo: encomende músicas e vídeos
+            📹 Cameo: encomende vídeos
           </Link>
         </li>
         <li>
