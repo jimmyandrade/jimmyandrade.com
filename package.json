@@ -33,7 +33,7 @@
     "@swc/jest": "0.2.29",
     "@testing-library/react": "14.0.0",
     "@types/jest": "^29.4.0",
-    "@types/node": "18.17.19",
+    "@types/node": "18.18.0",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
