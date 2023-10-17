@@ -245,12 +245,12 @@ const LinksPage = () => (
         <li>
           <Link
             className={'links-section-button'}
-            href={'https://chat.whatsapp.com/Lf2lq4rBbMX2yWjbAyaa2Q'}
+            href={'https://whatsapp.com/channel/0029VaCfLrV3GJP7GDZA5l1Q'}
             rel={'noopener noreferrer'}
             target={'_blank'}
-            title={'Comunidade no WhatsApp'}
+            title={'Canal no WhatsApp'}
           >
-            💬 Comunidade no WhatsApp
+            💬 Canal no WhatsApp
           </Link>
         </li>
         <li>
