@@ -46,6 +46,14 @@
     @apply mt-7 mb-6;
   }
 
+  h4 {
+    @apply mt-6 mb-4;
+  }
+
+  h5 {
+    @apply mt-5 mb-2;
+  }
+
   /* Another single elements */
 
   cite {
@@ -85,6 +93,25 @@
   /* Hierarchical elements */
   article header {
     @apply items-center;
+  }
+
+  article h3 {
+    @apply font-semibold text-xl;
+  }
+
+  article h4 {
+    @apply font-semibold text-lg;
+  }
+
+  article h5 {
+    @apply font-semibold text-base;
+  }
+
+  article dt {
+    @apply font-semibold mb-1 mt-6;
+  }
+  article p {
+    @apply mb-6;
   }
 }
 
