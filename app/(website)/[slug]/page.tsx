@@ -1,9 +1,9 @@
-import { join } from 'path';
-import { cwd } from 'process';
+import { readFileSync } from 'fs';
+import { Metadata } from 'next';
 import { existsSync } from 'next/dist/lib/find-pages-dir';
 import { notFound, redirect } from 'next/navigation';
-import { readFileSync } from 'cosmiconfig/dist/readFile';
-import { Metadata } from 'next';
+import { join } from 'path';
+import { cwd } from 'process';
 
 type PageParams = {
   slug: string;
