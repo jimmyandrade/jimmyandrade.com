@@ -1,9 +1,15 @@
-import { Wordmark } from 'src/components/Wordmark';
 import { PageHeader } from '../../../src/components/PageHeader';
 import { PageHeading } from '../../../src/components/PageHeading';
+import { Wordmark } from '../../../src/components/Wordmark';
 import { Container } from '../../../src/lib/components/Container';
 
-export const CrowdfundingPage = () => {
+export const metadata = {
+  title: 'Financiamento coletivo (crowdfunding) para apoiar meus projetos',
+  description:
+    'Por favor, me ajude a continuar minha jornada na música, apoiando meus projetos de gravação de disco, produção de videoclipes e shows',
+};
+
+const CrowdfundingPage = () => {
   const formatToCurrency = (cents: number) => {
     const formatter = new Intl.NumberFormat('pt-BR', {
       style: 'currency',
