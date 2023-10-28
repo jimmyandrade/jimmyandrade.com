@@ -1,11 +1,11 @@
 'use client';
 
+import classNames from 'classnames';
+import { forwardRef, HTMLAttributes } from 'react';
 import { useCountdown } from '../../hooks/useCountdown/useCountdown';
+import { AsChildComponent } from '../../lib/types/AsChildComponent';
 import { BigNumber } from './BigNumber';
 import { CountdownLabel } from './CountdownLabel';
-import { forwardRef, HTMLAttributes } from 'react';
-import { AsChildComponent } from '../../lib/types/AsChildComponent';
-import classNames from 'classnames';
 
 export interface CountdownProps
   extends HTMLAttributes<HTMLDivElement>,
@@ -26,7 +26,7 @@ export const Countdown = forwardRef<HTMLDivElement, CountdownProps>(
         aria-busy={isLoading}
         className={classNames(
           'grid gap-x-4 sm:gap-x-6 md:gap-x-8 lg:gap-x-10 xl:gap-x-12 text-center select-none',
-          className
+          className,
         )}
         data-datetime={dateTime}
         ref={forwardedRef}
@@ -67,6 +67,6 @@ export const Countdown = forwardRef<HTMLDivElement, CountdownProps>(
         </CountdownLabel>
       </div>
     );
-  }
+  },
 );
 Countdown.displayName = 'Countdown';

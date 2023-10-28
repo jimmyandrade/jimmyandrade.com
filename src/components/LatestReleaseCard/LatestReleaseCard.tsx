@@ -29,14 +29,15 @@ export const LatestReleaseCard = forwardRef<
   >
     <div className={'card-content space-y-4'}>
       <p className={'text-center text-md'}>
-        Dia <time dateTime="2023-11-03">3 de novembro</time>,&nbsp;
+        Dia <time dateTime="2023-11-03T00:00:00-03:00">3 de novembro</time>
+        ,&nbsp;
         <br className="sm:hidden" />
         minha nova música:
         <br />
         <cite className="text-xl">Sincera/Mente</cite>
       </p>
       {children}
-      <Countdown data-datetime="2023-11-03" />
+      <Countdown data-datetime="2023-11-03T00:00:00-03:00" />
       <p>
         <Link
           className={'button bg-white text-black w-full'}

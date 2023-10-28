@@ -42,7 +42,10 @@ const Homepage = () => {
                   }
                 >
                   Música nova{' '}
-                  <time dateTime={'2023-11-03'}>03 de novembro</time>:
+                  <time dateTime={'2023-11-03T00:00:00-03:00'}>
+                    03 de novembro
+                  </time>
+                  :
                 </p>
                 <Countdown
                   className={'px-8 pt-8 pb-4 text-white z-20'}
