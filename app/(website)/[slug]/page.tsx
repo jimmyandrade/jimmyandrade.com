@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { existsSync, readFileSync } from 'fs';
 import { Metadata } from 'next';
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
@@ -13,7 +14,6 @@ type PageProps = {
 };
 type StaticParams = PageParams[];
 type ContentData = {
-  featureFmFrameURL: string;
   openGraphImages: OpenGraph['images'];
   title: string;
 };
@@ -33,7 +33,18 @@ export const generateStaticParams = (): StaticParams => [
   },
 ];
 
-const getSongDataBySlug = (slug: PageParams['slug']): ContentData => {
+const getSongDataBySlug = (
+  slug: PageParams['slug'],
+): ContentData & {
+  /**
+   * @example 927
+   */
+  featureFmFrameHeight: number;
+  /**
+   * @example https://ffm.to/sinceramente
+   */
+  featureFmFrameURL: string;
+} => {
   console.log(slug);
 
   if (['duv', 'dúvida', 'd%C3%BAvida'].includes(slug)) {
@@ -100,17 +111,28 @@ export const generateMetadata = ({ params }: PageProps): Metadata => {
 const DuvidaPage = ({ params }: PageProps) => {
   const { slug } = params;
 
-  const { featureFmFrameURL, title } = getSongDataBySlug(slug);
+  const { featureFmFrameHeight, featureFmFrameURL, title } =
+    getSongDataBySlug(slug);
+  const frameMaxDimensions = {
+    height: 960,
+    width: 300,
+  };
+
+  const height = featureFmFrameHeight ?? frameMaxDimensions.height;
+  const width = frameMaxDimensions.width;
 
   return (
-    <article id={slug}>
+    <article id={slug} className="flex justify-center bg-black">
       <iframe
-        className={'min-w-[320px] w-full'}
-        height={1434}
+        className={classNames(
+          'min-w-[320px] w-full min-h-[300px]',
+          `max-w-[${height}px]`,
+        )}
+        height={height}
         loading={'eager'}
-        src={featureFmFrameURL}
+        src={`${featureFmFrameURL}/?height=${height}&width=${width}`}
         title={title}
-        width={320}
+        width={width}
       ></iframe>
     </article>
   );

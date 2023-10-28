@@ -1,15 +1,10 @@
-import {
-  HeartFilledIcon,
-  InstagramLogoIcon,
-  TwitterLogoIcon,
-  VercelLogoIcon,
-} from '@radix-ui/react-icons';
+import { HeartFilledIcon, VercelLogoIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { FooterLegalText } from '../../src/components/FooterLegalText/FooterLegalText';
 import { GlobalNavMenu } from '../../src/components/GlobalNavMenu';
 import { MainContent } from '../../src/components/MainContent';
-import { appName, companyName, twitterHandle } from '../../src/constants';
+import { appName, companyName } from '../../src/constants';
 import globalNavContent from '../../src/content/globalnav.json';
 import { Container } from '../../src/lib/components/Container';
 
@@ -78,7 +73,7 @@ const WebsiteLayout = ({ children }: WebsiteLayoutProps) => (
                 ))}
               </ul>
             </li>
-            <li>
+            {/* <li>
               Redes sociais
               <ul
                 className={'mt-6 space-y-6 sm:mt-4 sm:space-y-4'}
@@ -111,7 +106,7 @@ const WebsiteLayout = ({ children }: WebsiteLayoutProps) => (
                   </Link>
                 </li>
               </ul>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <FooterLegalText />
