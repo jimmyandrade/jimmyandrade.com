@@ -1,6 +1,5 @@
-import { readFileSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 import { Metadata } from 'next';
-import { existsSync } from 'next/dist/lib/find-pages-dir';
 import { notFound, redirect } from 'next/navigation';
 import { join } from 'path';
 import { cwd } from 'process';
