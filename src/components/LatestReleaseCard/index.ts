@@ -1,0 +1,1 @@
+export { LatestReleaseCard } from './LatestReleaseCard';

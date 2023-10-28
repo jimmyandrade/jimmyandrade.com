@@ -1,8 +1,9 @@
-import Link from 'next/link';
 import Image from 'next/image';
-import { Wordmark } from '../../src/components/Wordmark';
+import Link from 'next/link';
+import { JimmyversoLinks } from 'src/components/JimmyversoLinks/JimmyversoLinks';
+import { LatestReleaseCard } from 'src/components/LatestReleaseCard';
 import { FooterLegalText } from '../../src/components/FooterLegalText/FooterLegalText';
-import { LatestReleaseCard } from '../../src/components/LatestReleaseCard/LatestReleaseCard';
+import { Wordmark } from '../../src/components/Wordmark';
 
 const LinksPage = () => (
   <article
@@ -18,16 +19,14 @@ const LinksPage = () => (
         rel={'home'}
         target={'_self'}
       >
-        {/*<Image*/}
-        {/*  alt={*/}
-        {/*    ''*/}
-        {/*  }*/}
-        {/*  className={'rounded-full select-none w-24 h-24'}*/}
-        {/*  draggable={false}*/}
-        {/*  height={176}*/}
-        {/*  src={'/media/avatars/jimmy-andrade-duvida.jpeg'}*/}
-        {/*  width={176}*/}
-        {/*/>*/}
+        <Image
+          alt="A"
+          className={'rounded-full select-none w-24 h-24'}
+          draggable={false}
+          height={176}
+          src={'/media/avatars/jimmy-andrade-avatar.jpg'}
+          width={176}
+        />
         <Wordmark />
       </Link>
     </header>
@@ -37,9 +36,10 @@ const LinksPage = () => (
           alt={
             'Jimmy Andrade, uma pessoa com cabelo rosa e barba, canta em um microfone clássico na capa do single "? (Dúvida)"'
           }
-          height={300}
-          src={'/media/songs/duvida/capa-duvida-2023.jpg'}
-          width={300}
+          className="aspect-square"
+          height={500}
+          src={'/media/songs/sincera-mente/capa-do-single-sincera-mente.png'}
+          width={500}
         />
       </LatestReleaseCard>
     </section>
@@ -228,55 +228,7 @@ const LinksPage = () => (
         </li>
       </ul>
     </section>
-    <section>
-      <h2 className={'mb-2 font-bold'}>Jimmyverso</h2>
-      <ul className={'flex flex-col gap-y-2'}>
-        <li>
-          <Link
-            className={'links-section-button'}
-            href={'https://www.cameo.com/jimmyandrade'}
-            rel={'noopener noreferrer'}
-            target={'_blank'}
-            title={'Cameo: encomende vídeos'}
-          >
-            📹 Cameo: encomende vídeos
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={'links-section-button'}
-            href={'https://whatsapp.com/channel/0029VaCfLrV3GJP7GDZA5l1Q'}
-            rel={'noopener noreferrer'}
-            target={'_blank'}
-            title={'Canal no WhatsApp'}
-          >
-            💬 Canal no WhatsApp
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={'links-section-button'}
-            href={'https://t.me/+xcKd-SaXUT0zY2Q5'}
-            rel={'noopener noreferrer'}
-            target={'_blank'}
-            title={'Canal no Telegram'}
-          >
-            💬 Canal no Telegram
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={'links-section-button'}
-            href={'/'}
-            rel={'home'}
-            target={'_self'}
-            title={'JimmyAndrade.com'}
-          >
-            🏠 JimmyAndrade.com
-          </Link>
-        </li>
-      </ul>
-    </section>
+    <JimmyversoLinks />
     <footer className={'container mx-auto text-center'}>
       <FooterLegalText />
     </footer>

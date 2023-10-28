@@ -1,11 +1,11 @@
+import { ChevronRightIcon } from '@radix-ui/react-icons';
+import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Countdown } from '../../src/components/Countdown/Countdown';
 import { GalleryImage } from '../../src/components/GalleryImage/GalleryImage';
-import classNames from 'classnames';
-import { ChevronRightIcon } from '@radix-ui/react-icons';
-import { songToggle } from '../../src/constants';
 import { LatestReleaseCard } from '../../src/components/LatestReleaseCard/LatestReleaseCard';
+import { songToggle } from '../../src/constants';
 
 export const metadata = {
   alternates: {
@@ -17,26 +17,11 @@ const Homepage = () => {
   return (
     <article id={'home-page'} className={'home mx-auto w-full'}>
       <h1 className={'sr-only'}>Página inicial</h1>
-      <ul className={'lg:grid lg:grid-cols-2 pt-12 bg-grape-40'}>
-        <li
-          className={classNames(
-            'homepage-section xl:col-span-1 lg:max-h-screen',
-            'col-span-2 lg:h-screen',
-          )}
-        >
-          <LatestReleaseCard className={'absolute-center'} />
-          <Image
-            alt={
-              'Jimmy Andrade usa cabelo rosa, barba e está segurando um microfone. Atrás dele, um fundo rosa.'
-            }
-            className={'lg:object-cover lg:object-top lg:h-screen w-full'}
-            draggable={false}
-            height={3000}
-            priority={true}
-            src={'/media/songs/duvida/capa-duvida-2023.jpg'}
-            width={3000}
-          />
-        </li>
+      <ul
+        className={
+          'lg:grid lg:grid-cols-2 pt-12  bg-sinceramente bg-gradient-to-r'
+        }
+      >
         {songToggle.sinceramente && (
           <li
             className={
@@ -56,11 +41,12 @@ const Homepage = () => {
                     'text-center pt-8 text-white md:text-md lg:text-lg xl:text-xl z-20'
                   }
                 >
-                  Música nova <time dateTime={'2023-06-27'}>27 de junho</time>:
+                  Música nova{' '}
+                  <time dateTime={'2023-11-03'}>03 de novembro</time>:
                 </p>
                 <Countdown
                   className={'px-8 pt-8 pb-4 text-white z-20'}
-                  data-datetime={'2023-06-27T00:00:00-03:00'}
+                  data-datetime={'2023-11-03T00:00:00-03:00'}
                 />
                 <Link
                   className={classNames(
@@ -84,9 +70,11 @@ const Homepage = () => {
                   alt={
                     'Jimmy Andrade se apoiando em alguns catálogos telefônicos antigos e olhando para a câmera'
                   }
+                  height={3000}
                   src={
-                    '/media/songs/sincera-mente/capa-do-single-sincera-mente.jpg'
+                    '/media/songs/sincera-mente/capa-do-single-sincera-mente.png'
                   }
+                  width={3000}
                 />
               </GalleryImage>
             </div>
@@ -120,6 +108,26 @@ const Homepage = () => {
             </GalleryImage>
           </Link>
         </li>
+        <li
+          className={classNames(
+            'homepage-section xl:col-span-1 lg:max-h-screen',
+            'col-span-2 lg:h-screen',
+          )}
+        >
+          <LatestReleaseCard className={'absolute-center'} />
+          <Image
+            alt={
+              'Jimmy Andrade usa cabelo rosa, barba e está segurando um microfone. Atrás dele, um fundo rosa.'
+            }
+            className={'lg:object-cover lg:object-top lg:h-screen w-full'}
+            draggable={false}
+            height={3000}
+            priority={true}
+            src={'/media/songs/duvida/capa-duvida-2023.jpg'}
+            width={3000}
+          />
+        </li>
+
         <li className={'homepage-section'}>
           <Link href={'/um-plano'} title={'Um Plano'}>
             <Image

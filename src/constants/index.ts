@@ -30,5 +30,5 @@ export const baseURL = 'https://jimmyandrade.com';
 
 export const songToggle = {
   insensivel: false,
-  sinceramente: false,
+  sinceramente: true,
 };

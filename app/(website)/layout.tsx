@@ -1,17 +1,17 @@
-import type { ReactNode } from 'react';
-import { GlobalNavMenu } from '../../src/components/GlobalNavMenu';
-import { MainContent } from '../../src/components/MainContent';
-import { appName, companyName, twitterHandle } from '../../src/constants';
-import { Container } from '../../src/lib/components/Container';
-import Link from 'next/link';
-import globalNavContent from '../../src/content/globalnav.json';
 import {
   HeartFilledIcon,
   InstagramLogoIcon,
   TwitterLogoIcon,
   VercelLogoIcon,
 } from '@radix-ui/react-icons';
+import Link from 'next/link';
+import type { ReactNode } from 'react';
 import { FooterLegalText } from '../../src/components/FooterLegalText/FooterLegalText';
+import { GlobalNavMenu } from '../../src/components/GlobalNavMenu';
+import { MainContent } from '../../src/components/MainContent';
+import { appName, companyName, twitterHandle } from '../../src/constants';
+import globalNavContent from '../../src/content/globalnav.json';
+import { Container } from '../../src/lib/components/Container';
 
 interface WebsiteLayoutProps {
   children: ReactNode;
@@ -34,7 +34,9 @@ const WebsiteLayout = ({ children }: WebsiteLayoutProps) => (
     <MainContent>{children}</MainContent>
     <footer
       aria-labelledby={'global-footer-heading'}
-      className={'footer bg-grape-40 text-white'}
+      className={
+        'footer bg-olive-40 bg-sinceramente bg-gradient-to-r text-white'
+      }
       itemScope={true}
       itemType={'https://schema.org/WPFooter'}
       role={'contentinfo'}

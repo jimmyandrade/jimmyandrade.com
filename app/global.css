@@ -130,6 +130,10 @@
     @apply before:absolute before:h-full before:w-full;
   }
 
+  .bg-sinceramente {
+    @apply from-sky-40 to-olive-40;
+  }
+
   .absolute-center {
     @apply absolute left-1/2 -translate-x-1/2;
   }
@@ -191,7 +195,7 @@
   }
 
   .links-section-button {
-    @apply button w-full px-4 bg-white text-grape-40 min-w-[300px] justify-start;
+    @apply button w-full px-4 bg-white text-olive-30 min-w-[300px] justify-start;
   }
 
   .footer {

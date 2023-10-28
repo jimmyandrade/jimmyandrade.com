@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import Link from 'next/link';
-import { ChevronRightIcon } from '@radix-ui/react-icons';
 import { forwardRef, HTMLAttributes } from 'react';
 import { AsChildComponent } from '../../lib/types/AsChildComponent';
+import { Countdown } from '../Countdown/Countdown';
 
 export interface LatestReleaseCardProps
   extends AsChildComponent,
@@ -20,7 +20,7 @@ export const LatestReleaseCard = forwardRef<
 >(({ className = '', children, ...props }, forwardedRef) => (
   <div
     className={classNames(
-      'bg-grape-40 bg-opacity-60 card text-white',
+      'bg-sinceramente bg-opacity-60 card text-white',
       'bottom-4 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16',
       className,
     )}
@@ -28,17 +28,22 @@ export const LatestReleaseCard = forwardRef<
     ref={forwardedRef}
   >
     <div className={'card-content space-y-4'}>
-      {children}
-      <p className={'text-center text-sm'}>
-        <cite>? (Dúvida)</cite> versão <time dateTime={'2023'}>2023</time>
+      <p className={'text-center text-md'}>
+        Dia <time dateTime="2023-11-03">3 de novembro</time>,&nbsp;
+        <br className="sm:hidden" />
+        minha nova música:
+        <br />
+        <cite className="text-xl">Sincera/Mente</cite>
       </p>
+      {children}
+      <Countdown data-datetime="2023-11-03" />
       <p>
         <Link
           className={'button bg-white text-black w-full'}
-          href={'/duvida'}
-          title={'? (Dúvida)'}
+          href={'/sinceramente'}
+          title={'Faça pré-save de Sincera/Mente'}
         >
-          Ouvir agora <ChevronRightIcon />
+          Faça o pré-save agora
         </Link>
       </p>
     </div>

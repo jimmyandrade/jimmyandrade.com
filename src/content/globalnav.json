@@ -5,8 +5,8 @@
       "href": "/"
     },
     {
-      "title": "? (Dúvida)",
-      "href": "/duvida"
+      "title": "Sincera/Mente",
+      "href": "/sincera-mente"
     },
     {
       "title": "O Que Me Faz Maior",
@@ -15,6 +15,10 @@
     {
       "title": "Um Plano",
       "href": "/um-plano"
+    },
+    {
+      "title": "? (Dúvida)",
+      "href": "/duvida"
     }
   ]
 }

@@ -33,8 +33,20 @@ export const generateStaticParams = (): StaticParams => [
 ];
 
 const getSongDataBySlug = (slug: PageParams['slug']): ContentData => {
+  console.log(slug);
+
   if (['duv', 'dúvida', 'd%C3%BAvida'].includes(slug)) {
     redirect('/duvida');
+  }
+  if (
+    [
+      'sincera-mente',
+      'sincer-mente',
+      'sincera=mente',
+      'sincera%3Dmente',
+    ].includes(slug)
+  ) {
+    redirect('/sinceramente');
   }
 
   const filePath = join(cwd(), 'src/content/songs', `${slug}.json`);
@@ -43,9 +55,15 @@ const getSongDataBySlug = (slug: PageParams['slug']): ContentData => {
     return notFound();
   }
 
-  const fileContents = readFileSync(filePath);
+  const fileBuffer = readFileSync(filePath);
 
-  if (typeof fileContents !== 'string') {
+  if (typeof fileBuffer === 'undefined') {
+    return notFound();
+  }
+
+  const fileContents = fileBuffer.toString();
+
+  if (typeof fileContents === 'undefined') {
     return notFound();
   }
 

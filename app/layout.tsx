@@ -1,24 +1,24 @@
-import './global.css';
+import { ChevronDownIcon } from '@radix-ui/react-icons';
+import classNames from 'classnames';
+import type { Metadata } from 'next';
+import { Montserrat, Zilla_Slab } from 'next/font/google';
 import type { ReactNode } from 'react';
+import { Wordmark } from '../src/components/Wordmark';
 import {
   appName,
+  baseURL,
+  companyName,
   contentAnchorName,
   defaultLanguage,
   description,
+  icons,
   keywordsArray,
   keywordsString,
-  icons,
   productColor,
-  twitterHandle,
   pwaStartUrl,
-  baseURL,
-  companyName,
+  twitterHandle,
 } from '../src/constants';
-import { Montserrat, Zilla_Slab } from 'next/font/google';
-import classNames from 'classnames';
-import type { Metadata } from 'next';
-import { Wordmark } from '../src/components/Wordmark';
-import { ChevronDownIcon } from '@radix-ui/react-icons';
+import './global.css';
 
 const defaultTitle = `${appName} – website oficial – músicas, vídeos e mais`;
 
@@ -162,13 +162,18 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       className={classNames(
         'font-sans leading-6 scroll-smooth',
         sansSerifFont.variable,
-        serifFont.variable
+        serifFont.variable,
       )}
       dir={'ltr'}
       lang={defaultLanguage}
       id={'root'}
     >
-      <body className={'bg-grape-40 font-sans leading-6 m-0'} key={'body'}>
+      <body
+        className={
+          'bg-sinceramente bg-gradient-to-tl font-sans leading-6 m-0 overscroll-none'
+        }
+        key={'body'}
+      >
         <h1 className={'sr-only'}>
           <Wordmark />
         </h1>

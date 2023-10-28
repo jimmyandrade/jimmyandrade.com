@@ -1,7 +1,7 @@
-import { forwardRef, HTMLAttributes } from 'react';
-import { AsChildComponent } from '../../lib/types/AsChildComponent';
 import { Slot } from '@radix-ui/react-slot';
 import classNames from 'classnames';
+import { forwardRef, HTMLAttributes } from 'react';
+import { AsChildComponent } from '../../lib/types/AsChildComponent';
 
 export interface PageHeadingProps
   extends HTMLAttributes<HTMLHeadingElement>,
@@ -16,14 +16,14 @@ export const PageHeading = forwardRef<HTMLHeadingElement, PageHeadingProps>(
         {...props}
         ref={forwardedRef}
         className={classNames(
-          'bg-clip-text bg-duvida bg-gradient-to-br leading-normal text-transparent',
+          'bg-clip-text bg-sinceramente bg-gradient-to-br leading-normal text-transparent',
           'text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl',
-          className
+          className,
         )}
       >
         {children}
       </Component>
     );
-  }
+  },
 );
 PageHeading.displayName = 'PageHeading';
