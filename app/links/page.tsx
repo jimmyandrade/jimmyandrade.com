@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { JimmyversoLinks } from 'src/components/JimmyversoLinks/JimmyversoLinks';
-import { LatestReleaseCard } from 'src/components/LatestReleaseCard';
 import { FooterLegalText } from '../../src/components/FooterLegalText/FooterLegalText';
+import { JimmyversoLinks } from '../../src/components/JimmyversoLinks/JimmyversoLinks';
+import { LatestReleaseCard } from '../../src/components/LatestReleaseCard';
 import { Wordmark } from '../../src/components/Wordmark';
 
 const LinksPage = () => (
@@ -12,7 +12,7 @@ const LinksPage = () => (
     }
     id={'links-page'}
   >
-    <header>
+    {/* <header>
       <Link
         className={'flex flex-col items-center gap-y-4'}
         href={'/'}
@@ -29,7 +29,7 @@ const LinksPage = () => (
         />
         <Wordmark />
       </Link>
-    </header>
+    </header> */}
     <section>
       <LatestReleaseCard className={'min-w-[300px]'}>
         <Image
