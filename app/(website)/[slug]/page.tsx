@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from 'fs';
 import { Metadata } from 'next';
+import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
 import { notFound, redirect } from 'next/navigation';
 import { join } from 'path';
 import { cwd } from 'process';
@@ -13,6 +14,7 @@ type PageProps = {
 type StaticParams = PageParams[];
 type ContentData = {
   featureFmFrameURL: string;
+  openGraphImages: OpenGraph['images'];
   title: string;
 };
 
@@ -71,7 +73,7 @@ const getSongDataBySlug = (slug: PageParams['slug']): ContentData => {
 
 export const generateMetadata = ({ params }: PageProps): Metadata => {
   const { slug } = params;
-  const { title } = getSongDataBySlug(slug);
+  const { openGraphImages, title } = getSongDataBySlug(slug);
   const url = `/${slug}`;
   const description = `Ouça ${title} no seu serviço de música preferido, incluindo YouTube, Spotify, Apple Music e Deezer`;
 
@@ -82,6 +84,7 @@ export const generateMetadata = ({ params }: PageProps): Metadata => {
     description,
     openGraph: {
       description,
+      images: openGraphImages,
       title,
       url,
     },

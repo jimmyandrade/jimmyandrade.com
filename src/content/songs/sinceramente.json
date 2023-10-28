@@ -1,4 +1,12 @@
 {
   "title": "Sincera/Mente",
-  "featureFmFrameURL": "https://ffm.to/sinceramente"
+  "featureFmFrameURL": "https://ffm.to/sinceramente",
+  "openGraphImages": [
+    {
+      "alt": "Capa do single Sincera/Mente",
+      "height": 3000,
+      "url": "/media/songs/sincera-mente/capa-do-single-sincera-mente.png",
+      "width": 3000
+    }
+  ]
 }
