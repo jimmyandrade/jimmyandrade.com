@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Countdown } from '../../src/components/Countdown/Countdown';
 import { GalleryImage } from '../../src/components/GalleryImage/GalleryImage';
-import { LatestReleaseCard } from '../../src/components/LatestReleaseCard/LatestReleaseCard';
 import { songToggle } from '../../src/constants';
 
 export const metadata = {
@@ -71,7 +70,7 @@ const Homepage = () => {
               >
                 <Image
                   alt={
-                    'Jimmy Andrade se apoiando em alguns catálogos telefônicos antigos e olhando para a câmera'
+                    'Foto de um CD em que aparece, no reflexo, Jimmy Andrade, olhando para a direita'
                   }
                   height={3000}
                   src={
@@ -83,6 +82,31 @@ const Homepage = () => {
             </div>
           </li>
         )}
+        <li
+          className={classNames(
+            'homepage-section xl:col-span-1 lg:max-h-screen',
+            'col-span-2 lg:h-screen',
+          )}
+        >
+          <Link
+            href={'https://www.youtube.com/watch?v=zm09rzi4Xy0'}
+            rel={'noopener noreferrer'}
+            target={'_blank'}
+            title={"Blank Space (Jimmy's Version)"}
+          >
+            <Image
+              alt={
+                'Jimmy Andrade está de costas e tem uma tatuagem com o número 1989 em seu pescoço'
+              }
+              className={'lg:object-cover lg:object-top lg:h-screen w-full'}
+              draggable={false}
+              height={3000}
+              priority={true}
+              src={'/media/songs/1989-jv/1989-jv-capa.png'}
+              width={3000}
+            />
+          </Link>
+        </li>
         <li
           className={classNames(
             'homepage-section xl:col-span-1 lg:max-h-screen',
@@ -111,24 +135,26 @@ const Homepage = () => {
             </GalleryImage>
           </Link>
         </li>
+
         <li
           className={classNames(
             'homepage-section xl:col-span-1 lg:max-h-screen',
             'col-span-2 lg:h-screen',
           )}
         >
-          <LatestReleaseCard className={'absolute-center'} />
-          <Image
-            alt={
-              'Jimmy Andrade usa cabelo rosa, barba e está segurando um microfone. Atrás dele, um fundo rosa.'
-            }
-            className={'lg:object-cover lg:object-top lg:h-screen w-full'}
-            draggable={false}
-            height={3000}
-            priority={true}
-            src={'/media/songs/duvida/capa-duvida-2023.jpg'}
-            width={3000}
-          />
+          <Link href={'/duvida'} title={'? (Dúvida)'}>
+            <Image
+              alt={
+                'Jimmy Andrade usa cabelo rosa, barba e está segurando um microfone. Atrás dele, um fundo rosa.'
+              }
+              className={'lg:object-cover lg:object-top lg:h-screen w-full'}
+              draggable={false}
+              height={3000}
+              priority={true}
+              src={'/media/songs/duvida/capa-duvida-2023.jpg'}
+              width={3000}
+            />
+          </Link>
         </li>
 
         <li className={'homepage-section'}>
