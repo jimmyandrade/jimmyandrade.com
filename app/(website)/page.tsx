@@ -2,7 +2,6 @@ import { ChevronRightIcon } from '@radix-ui/react-icons';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Countdown } from '../../src/components/Countdown/Countdown';
 import { GalleryImage } from '../../src/components/GalleryImage/GalleryImage';
 import { songToggle } from '../../src/constants';
 
@@ -35,21 +34,13 @@ const Homepage = () => {
                   'before:bg-olive-50 before:bg-gradient-to-r before:from-sky-60 before:to-olive-50 before:rounded-2xl before:opacity-50 before:w-full before:h-full before:absolute before:pointer-events-none before:z-10',
                 )}
               >
-                <p
+                <cite
                   className={
                     'text-center pt-8 text-white md:text-md lg:text-lg xl:text-xl z-20'
                   }
                 >
-                  Música nova{' '}
-                  <time dateTime={'2023-11-03T00:00:00-03:00'}>
-                    03 de novembro
-                  </time>
-                  :
-                </p>
-                <Countdown
-                  className={'px-8 pt-8 pb-4 text-white z-20'}
-                  data-datetime={'2023-11-03T00:00:00-03:00'}
-                />
+                  Sincera/Mente
+                </cite>
                 <Link
                   className={classNames(
                     'button bg-white text-black',
@@ -59,7 +50,8 @@ const Homepage = () => {
                   href={'/sinceramente'}
                   title={'Sincera/Mente'}
                 >
-                  Sincera/Mente: faça o pré-save <ChevronRightIcon />
+                  Escute meu novo single
+                  <ChevronRightIcon />
                 </Link>
               </div>
               <GalleryImage

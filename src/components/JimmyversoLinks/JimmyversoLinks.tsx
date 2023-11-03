@@ -49,19 +49,6 @@ export const JimmyversoLinks = forwardRef<HTMLDivElement, JimmyversoLinksProps>(
         <li>
           <Link
             className={'links-section-button'}
-            href={
-              'https://docs.google.com/forms/d/e/1FAIpQLScXm96412RvakqB9b0Ktk9e6HqSfg0ulrYNe7BGLzsZubti9Q/viewform?fbclid=PAAaZvytcEVempMxwzx9Q4A0CdFo389F79H5O5p-VbO3KsS86NJZWJglCpkh8_aem_AXW-XW04UY_lHAZSNl2zDBJbsdhujza4HRcUSr52RrCbbKaMuuR9Qh4wInV34_ABM2I'
-            }
-            rel={'noopener noreferrer'}
-            target={'_blank'}
-            title={'Vote Jimmy Andrade nos Prêmios Butterfly 2023'}
-          >
-            Vote Jimmy no Prêmio Butterfly
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={'links-section-button'}
             href={'/'}
             rel={'home'}
             target={'_self'}

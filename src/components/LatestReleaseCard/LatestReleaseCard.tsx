@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import { forwardRef, HTMLAttributes } from 'react';
 import { AsChildComponent } from '../../lib/types/AsChildComponent';
-import { Countdown } from '../Countdown/Countdown';
 
 export interface LatestReleaseCardProps
   extends AsChildComponent,
@@ -37,14 +36,13 @@ export const LatestReleaseCard = forwardRef<
         <cite className="text-xl">Sincera/Mente</cite>
       </p>
       {children}
-      <Countdown data-datetime="2023-11-03T00:00:00-03:00" />
       <p>
         <Link
           className={'button bg-white text-black w-full'}
           href={'/sinceramente'}
-          title={'Faça pré-save de Sincera/Mente'}
+          title={'Escutar Sincera/Mente agora'}
         >
-          Faça o pré-save agora
+          Escute minha nova música agora
         </Link>
       </p>
     </div>

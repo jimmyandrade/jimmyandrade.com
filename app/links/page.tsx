@@ -33,9 +33,7 @@ const LinksPage = () => (
     <section>
       <LatestReleaseCard className={'min-w-[300px]'}>
         <Image
-          alt={
-            'Jimmy Andrade, uma pessoa com cabelo rosa e barba, canta em um microfone clássico na capa do single "? (Dúvida)"'
-          }
+          alt={'Capa do single "Sincera/Mente"'}
           className="aspect-square"
           height={500}
           src={'/media/songs/sincera-mente/capa-do-single-sincera-mente.png'}
