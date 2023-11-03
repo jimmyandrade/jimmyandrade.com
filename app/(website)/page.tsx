@@ -65,6 +65,7 @@ const Homepage = () => {
                     'Foto de um CD em que aparece, no reflexo, Jimmy Andrade, olhando para a direita'
                   }
                   height={3000}
+                  priority={true}
                   src={
                     '/media/songs/sincera-mente/capa-do-single-sincera-mente.png'
                   }
@@ -93,7 +94,6 @@ const Homepage = () => {
               className={'lg:object-cover lg:object-top lg:h-screen w-full'}
               draggable={false}
               height={3000}
-              priority={true}
               src={'/media/songs/1989-jv/1989-jv-capa.png'}
               width={3000}
             />

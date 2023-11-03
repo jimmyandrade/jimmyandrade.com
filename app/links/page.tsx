@@ -36,6 +36,7 @@ const LinksPage = () => (
           alt={'Capa do single "Sincera/Mente"'}
           className="aspect-square"
           height={500}
+          priority={true}
           src={'/media/songs/sincera-mente/capa-do-single-sincera-mente.png'}
           width={500}
         />
