@@ -30,9 +30,9 @@ export const JimmyversoLinks = forwardRef<HTMLDivElement, JimmyversoLinksProps>(
             href={'https://whatsapp.com/channel/0029VaCfLrV3GJP7GDZA5l1Q'}
             rel={'noopener noreferrer'}
             target={'_blank'}
-            title={'Jimmyverso no WhatsApp'}
+            title={'Canal no WhatsApp'}
           >
-            💬 Jimmyverso no WhatsApp
+            💬 Canal no WhatsApp
           </Link>
         </li>
         <li>
@@ -41,9 +41,9 @@ export const JimmyversoLinks = forwardRef<HTMLDivElement, JimmyversoLinksProps>(
             href={'https://t.me/+xcKd-SaXUT0zY2Q5'}
             rel={'noopener noreferrer'}
             target={'_blank'}
-            title={'Jimmyverso no Telegram'}
+            title={'Canal no Telegram'}
           >
-            💬 Jimmyverso no Telegram
+            💬 Canal no Telegram
           </Link>
         </li>
         <li>

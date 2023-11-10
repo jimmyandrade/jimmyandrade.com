@@ -8,7 +8,7 @@ import { Wordmark } from '../../src/components/Wordmark';
 const LinksPage = () => (
   <article
     className={
-      'flex flex-col items-center text-white mx-auto gap-y-8 px-2 py-8'
+      'flex flex-col items-center text-white mx-auto gap-y-8 px-2 py-2'
     }
     id={'links-page'}
   >
@@ -30,61 +30,18 @@ const LinksPage = () => (
         <Wordmark />
       </Link>
     </header> */}
+    <LatestReleaseCard className={'min-w-[300px]'}>
+      <Image
+        alt={'Capa do single "Sincera/Mente"'}
+        className="aspect-square"
+        height={500}
+        priority={true}
+        src={'/media/songs/sincera-mente/capa-do-single-sincera-mente.png'}
+        width={500}
+      />
+    </LatestReleaseCard>
     <section>
-      <LatestReleaseCard className={'min-w-[300px]'}>
-        <Image
-          alt={'Capa do single "Sincera/Mente"'}
-          className="aspect-square"
-          height={500}
-          priority={true}
-          src={'/media/songs/sincera-mente/capa-do-single-sincera-mente.png'}
-          width={500}
-        />
-      </LatestReleaseCard>
-    </section>
-    <section>
-      <h2 className={'mb-2 font-bold'}>Assistir no YouTube</h2>
-      <ul className={'flex flex-col gap-y-2'}>
-        <li>
-          <Link
-            className={'links-section-button'}
-            href={'https://www.youtube.com/watch?v=ZvFQVMGsfgI'}
-            rel={'noopener noreferrer'}
-            title={'Assistir "? (Dúvida)"'}
-            target={'_blank'}
-          >
-            📺&nbsp;<cite>? (Dúvida)</cite>
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={'links-section-button'}
-            href={'https://www.youtube.com/watch?v=-huz-hZxmvM'}
-            rel={'noopener noreferrer'}
-            target={'_blank'}
-            title={'Assistir "Mais Uma Voz (feat. Pabllo Vittar)"'}
-          >
-            📺&nbsp;
-            <cite>
-              Mais Uma Voz <small>(feat. Pabllo Vittar)</small>
-            </cite>
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={'links-section-button'}
-            href={'https://youtube.com/jimmyandrade'}
-            rel={'noopener noreferrer'}
-            target={'_blank'}
-            title={'YouTube'}
-          >
-            ▶️ Canal no YouTube
-          </Link>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2 className={'mb-2 font-bold'}>Ouvir no Spotify</h2>
+      <h2 className={'mb-2 font-bold'}>Escute também</h2>
       <ul className={'flex flex-col gap-y-2'}>
         <li>
           <Link
@@ -94,7 +51,7 @@ const LinksPage = () => (
             }
             rel={'noopener noreferrer'}
             target={'_blank'}
-            title={'Playlist This is Jimmy Andrade no Spotify'}
+            title={'Playlist This is Jimmy Andrade'}
           >
             <span>
               🎵&nbsp;
@@ -110,13 +67,81 @@ const LinksPage = () => (
           <Link
             className={'links-section-button'}
             href={
-              'https://open.spotify.com/playlist/79fn9QtKRCKJpvGSAJCxZd?si=a743fcdbbeb44060'
+              'https://open.spotify.com/playlist/1UHHHm5p7Fczj1VGipRSni?si=b0007b7b6557475e'
             }
             rel={'noopener noreferrer'}
             target={'_blank'}
-            title={'Playlist Orgulho Mineiro'}
+            title={'Playlist de Pop Anos 2000'}
           >
-            <span role={'img'}>🏳️‍🌈&nbsp;</span> Playlist Orgulho Mineiro
+            <span aria-hidden={true} role={'presentation'}>
+              💿&nbsp;
+            </span>{' '}
+            Playlist de Pop Anos 2000
+          </Link>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2 className={'mb-2 font-bold'}>Assista também</h2>
+      <ul className={'flex flex-col gap-y-2'}>
+        <li>
+          <Link
+            className={'links-section-button'}
+            href={'https://www.youtube.com/watch?v=ZvFQVMGsfgI'}
+            rel={'noopener noreferrer'}
+            title={'Assistir "? (Dúvida)"'}
+            target={'_blank'}
+          >
+            📺&nbsp;<cite>? (Dúvida)</cite>
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={'links-section-button'}
+            href={'https://www.youtube.com/watch?v=u4nS5Gkm-RM'}
+            rel={'noopener noreferrer'}
+            target={'_blank'}
+            title={'Assistir "O Que Me Faz Maior"'}
+          >
+            <span aria-hidden={true} role="presentation">
+              📺&nbsp;
+            </span>
+            <cite>O Que Me Faz Maior</cite>
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={'links-section-button'}
+            href={'https://www.youtube.com/watch?v=-huz-hZxmvM'}
+            rel={'noopener noreferrer'}
+            target={'_blank'}
+            title={'Assistir "Mais Uma Voz (feat. Pabllo Vittar)"'}
+          >
+            <span aria-hidden={true} role="presentation">
+              📺&nbsp;
+            </span>
+            <cite>
+              Mais Uma Voz <small>(feat. Pabllo Vittar)</small>
+            </cite>
+          </Link>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2 className={'mb-2 font-bold'}>Plataformas de música</h2>
+      <ul className={'flex flex-col gap-y-2'}>
+        <li>
+          <Link
+            className={'links-section-button'}
+            href={'https://youtube.com/jimmyandrade'}
+            rel={'noopener noreferrer'}
+            target={'_blank'}
+            title={'YouTube'}
+          >
+            <span aria-hidden={true} role="presentation">
+              📺&nbsp;
+            </span>{' '}
+            YouTube
           </Link>
         </li>
         <li>
@@ -129,29 +154,9 @@ const LinksPage = () => (
             target={'_blank'}
             title={'Spotify'}
           >
-            🎵 Me siga no Spotify
+            🎵 Spotify
           </Link>
         </li>
-        {/*<li>*/}
-        {/*  <Link*/}
-        {/*    className={'links-section-button'}*/}
-        {/*    href={*/}
-        {/*      'https://www.sympla.com.br/sua-festa-julina-no-seu-trem__2015346?token=781cde4a8210cd2e39484632c410e806'*/}
-        {/*    }*/}
-        {/*    rel={'noopener noreferrer'}*/}
-        {/*    target={'_blank'}*/}
-        {/*  >*/}
-        {/*    <span>*/}
-        {/*      🎟️ <time dateTime={'2023-07-23 20:30'}>23/07 20:30</time>: Festa*/}
-        {/*      Julina do Seu Trem*/}
-        {/*    </span>*/}
-        {/*  </Link>*/}
-        {/*</li>*/}
-      </ul>
-    </section>
-    <section>
-      <h2 className={'mb-2 font-bold'}>Outras plataformas de música</h2>
-      <ul className={'flex flex-col gap-y-2'}>
         <li>
           <Link
             className={'links-section-button'}
