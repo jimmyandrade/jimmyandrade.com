@@ -46,6 +46,20 @@ const LinksPage = () => (
         <li>
           <Link
             className={'links-section-button'}
+            href={'https://soundcloud.com/jimmyandrade/sets/sinceremixes'}
+            rel={'noopener noreferrer'}
+            target={'_blank'}
+            title="Remixes de Sincera/Mente"
+          >
+            <span aria-hidden={true} role={'presentation'}>
+              🎛️&nbsp;
+            </span>
+            Remixes de&nbsp;<cite>Sincera/Mente</cite>
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={'links-section-button'}
             href={
               'https://open.spotify.com/playlist/4gEHuLcJegImyunC9prd1D?si=f24a8cd2fb314300'
             }
@@ -71,12 +85,26 @@ const LinksPage = () => (
             }
             rel={'noopener noreferrer'}
             target={'_blank'}
-            title={'Playlist de Pop Anos 2000'}
+            title={'Playlist de Pop Nacional Anos 2000'}
           >
             <span aria-hidden={true} role={'presentation'}>
               💿&nbsp;
-            </span>{' '}
-            Playlist de Pop Anos 2000
+            </span>
+            Pop Nacional Anos 2000
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={'links-section-button'}
+            href="https://open.spotify.com/playlist/6HDxAtTCqwFvq29lim1Dlz?si=5ca25466f5774563"
+            rel={'noopener noreferrer'}
+            target={'_blank'}
+            title={'Playlist de Pop/Rock Internacional 2000'}
+          >
+            <span aria-hidden={true} role={'presentation'}>
+              💿&nbsp;
+            </span>
+            Pop/Rock Internacional 2000
           </Link>
         </li>
       </ul>
@@ -125,11 +153,6 @@ const LinksPage = () => (
             </cite>
           </Link>
         </li>
-      </ul>
-    </section>
-    <section>
-      <h2 className={'mb-2 font-bold'}>Plataformas de música</h2>
-      <ul className={'flex flex-col gap-y-2'}>
         <li>
           <Link
             className={'links-section-button'}
@@ -141,9 +164,14 @@ const LinksPage = () => (
             <span aria-hidden={true} role="presentation">
               📺&nbsp;
             </span>{' '}
-            YouTube
+            Canal no YouTube
           </Link>
         </li>
+      </ul>
+    </section>
+    <section>
+      <h2 className={'mb-2 font-bold'}>Plataformas de música</h2>
+      <ul className={'flex flex-col gap-y-2'}>
         <li>
           <Link
             className={'links-section-button'}
@@ -228,6 +256,17 @@ const LinksPage = () => (
             title={'TikTok'}
           >
             📹 TikTok
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={'links-section-button'}
+            href={'https://x.com/jimmyandrade'}
+            rel={'noopener noreferrer'}
+            target={'_blank'}
+            title={'Twitter'}
+          >
+            🐦 X (Twitter)
           </Link>
         </li>
       </ul>
