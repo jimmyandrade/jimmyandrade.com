@@ -134,6 +134,10 @@
     @apply from-sky-40 to-olive-40;
   }
 
+  .bg-ultimato {
+    @apply bg-kernel-20 from-kernel-20 to-salmon-30;
+  }
+
   .absolute-center {
     @apply absolute left-1/2 -translate-x-1/2;
   }

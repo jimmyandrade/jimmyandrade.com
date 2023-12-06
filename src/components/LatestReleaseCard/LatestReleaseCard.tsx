@@ -28,18 +28,16 @@ export const LatestReleaseCard = forwardRef<
   >
     <div className={'card-content space-y-4'}>
       <p className={'text-center text-md'}>
-        {/* Dia <time dateTime="2023-11-03T00:00:00-03:00">3 de novembro</time>
+        Dia <time dateTime="2023-12-08T00:00:00-03:00">8 de dezembro</time>
         ,&nbsp;
-         */}
-        Assista ao clipe&nbsp;
         <br className="sm:hidden" />
-        da minha nova música:
+        minha próxima música:
         <br />
-        <cite className="text-xl">Sincera/Mente</cite>
+        <cite className="text-xl">Ultimato</cite>
       </p>
       {children}
       <div className="flex flex-col sm:flex-row gap-y-2 gap-x-2">
-        <Link
+        {/* <Link
           className="button bg-white text-black w-full"
           href={'https://www.youtube.com/watch?v=H5ZgsNUmfOM'}
           rel={'noopener noreferrer'}
@@ -50,13 +48,13 @@ export const LatestReleaseCard = forwardRef<
           <em lang="en" className="not-italic">
             YouTube
           </em>
-        </Link>
+        </Link> */}
         <Link
           className={'button bg-white text-black w-full'}
-          href={'/sinceramente'}
-          title={'Escutar Sincera/Mente agora'}
+          href={'/ultimato'}
+          title={'Fazer o pré-save de "Ultimato." agora'}
         >
-          Ouvir nas plataformas
+          Fazer o pré-save de&nbsp;<cite>Ultimato.</cite>&nbsp;agora
         </Link>
       </div>
     </div>

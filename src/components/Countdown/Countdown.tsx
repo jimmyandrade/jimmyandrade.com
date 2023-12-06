@@ -25,7 +25,7 @@ export const Countdown = forwardRef<HTMLDivElement, CountdownProps>(
       <div
         aria-busy={isLoading}
         className={classNames(
-          'grid gap-x-4 sm:gap-x-6 md:gap-x-8 lg:gap-x-10 xl:gap-x-12 text-center select-none',
+          'grid gap-x-2 sm:gap-x-4 md:gap-x-6 lg:gap-x-8 xl:gap-x-10 text-center select-none',
           className,
         )}
         data-datetime={dateTime}

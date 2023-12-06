@@ -16,7 +16,7 @@ export const PageHeading = forwardRef<HTMLHeadingElement, PageHeadingProps>(
         {...props}
         ref={forwardedRef}
         className={classNames(
-          'bg-clip-text bg-sinceramente bg-gradient-to-br leading-normal text-transparent',
+          'bg-clip-text bg-ultimato bg-gradient-to-br leading-normal text-transparent',
           'text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl',
           className,
         )}

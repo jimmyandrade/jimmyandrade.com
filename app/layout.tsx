@@ -170,7 +170,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
     >
       <body
         className={
-          'bg-sinceramente bg-gradient-to-tl font-sans leading-6 m-0 overscroll-none'
+          'bg-ultimato bg-gradient-to-tl font-sans leading-6 m-0 overscroll-none'
         }
         key={'body'}
       >

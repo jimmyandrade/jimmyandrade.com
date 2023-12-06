@@ -29,9 +29,7 @@ const WebsiteLayout = ({ children }: WebsiteLayoutProps) => (
     <MainContent>{children}</MainContent>
     <footer
       aria-labelledby={'global-footer-heading'}
-      className={
-        'footer bg-olive-40 bg-sinceramente bg-gradient-to-r text-white'
-      }
+      className={'footer bg-olive-40 bg-ultimato bg-gradient-to-r text-white'}
       itemScope={true}
       itemType={'https://schema.org/WPFooter'}
       role={'contentinfo'}

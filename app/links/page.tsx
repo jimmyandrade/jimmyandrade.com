@@ -31,14 +31,16 @@ const LinksPage = () => (
       </Link>
     </header> */}
     <LatestReleaseCard className={'min-w-[300px]'}>
-      <Image
-        alt={'Capa do single "Sincera/Mente"'}
-        className="aspect-square"
-        height={500}
-        priority={true}
-        src={'/media/songs/sincera-mente/capa-do-single-sincera-mente.png'}
-        width={500}
-      />
+      <Link href={'/ultimato'} title={'Ultimato.'}>
+        <Image
+          alt={'Capa do single "Ultimato"'}
+          className="aspect-square"
+          height={500}
+          priority={true}
+          src={'/media/songs/ultimato/capa-do-single-ultimato.png'}
+          width={500}
+        />
+      </Link>
     </LatestReleaseCard>
     <section>
       <h2 className={'mb-2 font-bold'}>Escute também</h2>

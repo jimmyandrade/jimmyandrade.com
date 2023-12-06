@@ -2,6 +2,7 @@ import { ChevronRightIcon } from '@radix-ui/react-icons';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Countdown } from 'src/components/Countdown/Countdown';
 import { GalleryImage } from '../../src/components/GalleryImage/GalleryImage';
 import { songToggle } from '../../src/constants';
 
@@ -20,6 +21,61 @@ const Homepage = () => {
           'lg:grid lg:grid-cols-2 pt-12  bg-sinceramente bg-gradient-to-r'
         }
       >
+        <li
+          className={
+            'homepage-section col-span-2 lg:h-screen lg:max-h-screen xl:col-span-1'
+          }
+        >
+          <div>
+            <div
+              className={classNames(
+                'card absolute-center',
+                'bottom-4 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16',
+                'before:bg-olive-50 before:bg-gradient-to-r before:from-sky-60 before:to-olive-50 before:rounded-2xl before:opacity-50 before:w-full before:h-full before:absolute before:pointer-events-none before:z-10',
+              )}
+            >
+              <cite
+                className={
+                  'text-center pt-8 text-white md:text-md lg:text-lg xl:text-xl z-20'
+                }
+              >
+                Ultimato.
+              </cite>
+              <Countdown
+                data-datetime="2023-12-08T00:00:00-03:00"
+                className="text-white px-6"
+              />
+              <Link
+                className={classNames(
+                  'button bg-white text-black',
+                  'text-sm sm:text-base md:text-lg',
+                  'py-2.5 px-3.5 z-30 m-2 sm:m-3 lg:m-4 xl:m-6',
+                )}
+                href={'/ultimato'}
+                title={'Ultimato.'}
+              >
+                Faça pré-save do novo single
+                <ChevronRightIcon />
+              </Link>
+            </div>
+            <GalleryImage
+              asChild={true}
+              className={
+                'aspect-square lg:object-cover lg:object-bottom lg:h-screen'
+              }
+            >
+              <Image
+                alt={
+                  "Na capa do single de 'Ultimato.', Jimmy Andrade está usando um casaco preto, olha para a direita. Em volta dele, uma moldura em forma de U."
+                }
+                height={3000}
+                priority={true}
+                src={'/media/songs/ultimato/capa-do-single-ultimato.png'}
+                width={3000}
+              />
+            </GalleryImage>
+          </div>
+        </li>
         {songToggle.sinceramente && (
           <li
             className={
@@ -75,7 +131,7 @@ const Homepage = () => {
             </div>
           </li>
         )}
-        <li
+        {/* <li
           className={classNames(
             'homepage-section xl:col-span-1 lg:max-h-screen',
             'col-span-2 lg:h-screen',
@@ -98,7 +154,7 @@ const Homepage = () => {
               width={3000}
             />
           </Link>
-        </li>
+        </li> */}
         <li
           className={classNames(
             'homepage-section xl:col-span-1 lg:max-h-screen',

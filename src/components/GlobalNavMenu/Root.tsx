@@ -30,9 +30,9 @@ export const Root = forwardRef<HTMLElement, GlobalNavMenuRoot>(
             'h-12': !ariaExpanded,
             'h-auto': ariaExpanded,
             'top-0': !isPageScrolled,
-            'shadow-none bg-olive-40 bg-sinceramente bg-gradient-to-r bg-opacity-100 max-w-full top-0 w-full':
+            'shadow-none bg-olive-40 bg-ultimato bg-gradient-to-r bg-opacity-100 max-w-full top-0 w-full':
               !isPageScrolled,
-            'shadow max-w-xs mx-auto rounded top-4 before:bg-sinceramente before:bg-gradient-to-l before:opacity-80 before:rounded blurred-backdrop bg-gradient-before':
+            'shadow max-w-xs mx-auto rounded top-4 before:bg-ultimato before:bg-gradient-to-l before:opacity-80 before:rounded blurred-backdrop bg-gradient-before':
               isPageScrolled,
           },
           className,
