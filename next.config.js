@@ -29,6 +29,11 @@ const nextConfig = {
         destination: '/manifest.webmanifest',
         permanent: true,
       },
+      {
+        source: '/ultimato',
+        destination: 'https://ffm.to/ultimato-presave',
+        permanent: false,
+      }
     ];
   },
 };
