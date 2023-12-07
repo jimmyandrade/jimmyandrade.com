@@ -31,12 +31,7 @@ const LinksPage = () => (
       </Link>
     </header> */}
     <LatestReleaseCard className={'min-w-[300px]'}>
-      <Link
-        href={'https://ffm.to/ultimato-presave'}
-        rel="noopener noreferrer"
-        target="_blank"
-        title={'Ultimato.'}
-      >
+      <Link href={'/ultimato'} title={'Ultimato.'}>
         <Image
           alt={'Capa do single "Ultimato"'}
           className="aspect-square"
