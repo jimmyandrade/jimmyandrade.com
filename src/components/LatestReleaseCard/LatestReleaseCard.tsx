@@ -51,7 +51,9 @@ export const LatestReleaseCard = forwardRef<
         </Link> */}
         <Link
           className={'button bg-white text-black w-full'}
-          href={'/ultimato'}
+          href={'https://ffm.to/ultimato-presave'}
+          rel={'noopener noreferrer'}
+          target={'_blank'}
           title={'Fazer o pré-save de "Ultimato." agora'}
         >
           Fazer o pré-save de&nbsp;<cite>Ultimato.</cite>&nbsp;agora

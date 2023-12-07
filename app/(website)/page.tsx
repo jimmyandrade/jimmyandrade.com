@@ -51,7 +51,9 @@ const Homepage = () => {
                   'text-sm sm:text-base md:text-lg',
                   'py-2.5 px-3.5 z-30 m-2 sm:m-3 lg:m-4 xl:m-6',
                 )}
-                href={'/ultimato'}
+                href={'https://ffm.to/ultimato-presave'}
+                rel="noopener noreferrer"
+                target={'_blank'}
                 title={'Ultimato.'}
               >
                 Faça pré-save do novo single
