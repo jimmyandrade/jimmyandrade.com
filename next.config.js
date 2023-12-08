@@ -28,6 +28,11 @@ const nextConfig = {
         source: '/manifest.json',
         destination: '/manifest.webmanifest',
         permanent: true,
+      },
+      {
+        source: '/ultimato',
+        destination: 'https://onerpm.link/528000625018',
+        permanent: false,
       }
     ];
   },
