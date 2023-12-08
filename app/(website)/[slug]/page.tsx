@@ -108,7 +108,7 @@ export const generateMetadata = ({ params }: PageProps): Metadata => {
   } as Metadata;
 };
 
-const DuvidaPage = ({ params }: PageProps) => {
+const SingleSongPage = ({ params }: PageProps) => {
   const { slug } = params;
 
   const { featureFmFrameHeight, featureFmFrameURL, title } =
@@ -126,7 +126,7 @@ const DuvidaPage = ({ params }: PageProps) => {
       <iframe
         className={classNames(
           'min-w-[320px] w-full min-h-[300px]',
-          `max-w-[${height}px]`,
+          `max-w-[${height}px] z-50`,
         )}
         height={height}
         loading={'eager'}
@@ -138,4 +138,4 @@ const DuvidaPage = ({ params }: PageProps) => {
   );
 };
 
-export default DuvidaPage;
+export default SingleSongPage;

@@ -2,7 +2,6 @@ import { ChevronRightIcon } from '@radix-ui/react-icons';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Countdown } from 'src/components/Countdown/Countdown';
 import { GalleryImage } from '../../src/components/GalleryImage/GalleryImage';
 import { songToggle } from '../../src/constants';
 
@@ -41,10 +40,10 @@ const Homepage = () => {
               >
                 Ultimato.
               </cite>
-              <Countdown
+              {/* <Countdown
                 data-datetime="2023-12-08T00:00:00-03:00"
                 className="text-white px-6"
-              />
+              /> */}
               <Link
                 className={classNames(
                   'button bg-white text-black',
@@ -54,7 +53,7 @@ const Homepage = () => {
                 href={'/ultimato'}
                 title={'Ultimato.'}
               >
-                Faça pré-save do novo single
+                Ouça agora a nova música
                 <ChevronRightIcon />
               </Link>
             </div>
@@ -106,7 +105,7 @@ const Homepage = () => {
                   href={'/sinceramente'}
                   title={'Sincera/Mente'}
                 >
-                  Escute meu novo single
+                  Nostalgia dos anos 2000
                   <ChevronRightIcon />
                 </Link>
               </div>

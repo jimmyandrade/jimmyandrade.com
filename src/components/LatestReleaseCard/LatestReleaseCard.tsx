@@ -28,10 +28,10 @@ export const LatestReleaseCard = forwardRef<
   >
     <div className={'card-content space-y-4'}>
       <p className={'text-center text-md'}>
-        Dia <time dateTime="2023-12-08T00:00:00-03:00">8 de dezembro</time>
-        ,&nbsp;
-        <br className="sm:hidden" />
-        minha próxima música:
+        {/* Dia <time dateTime="2023-12-08T00:00:00-03:00">8 de dezembro</time>
+        ,&nbsp; */}
+        {/* <br className="sm:hidden" /> */}
+        Minha nova música:
         <br />
         <cite className="text-xl">Ultimato</cite>
       </p>
@@ -52,9 +52,9 @@ export const LatestReleaseCard = forwardRef<
         <Link
           className={'button bg-white text-black w-full'}
           href={'/ultimato'}
-          title={'Fazer o pré-save de "Ultimato." agora'}
+          title={'Ouvir "Ultimato." agora'}
         >
-          Fazer o pré-save de&nbsp;<cite>Ultimato.</cite>&nbsp;agora
+          Ouvir&nbsp;<cite>Ultimato.</cite>&nbsp;agora
         </Link>
       </div>
     </div>
