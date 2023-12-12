@@ -33,7 +33,12 @@ const nextConfig = {
         source: '/ultimato',
         destination: 'https://onerpm.link/528000625018',
         permanent: false,
-      }
+      },
+      {
+        source: '/ultimato/video',
+        destination: 'https://www.youtube.com/watch?v=E_sZHM53ekE',
+        permanent: false,
+      },
     ];
   },
 };
