@@ -39,6 +39,11 @@ const nextConfig = {
         destination: 'https://www.youtube.com/watch?v=E_sZHM53ekE',
         permanent: false,
       },
+      {
+        source: '/ultimato/videos',
+        destination: 'https://www.youtube.com/watch?v=E_sZHM53ekE',
+        permanent: false,
+      }
     ];
   },
 };
