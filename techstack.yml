@@ -1,7 +1,8 @@
 repo_name: jimmyandrade/jimmyandrade.com
-report_id: d328a81f2b3798289bc45972cc3345b0
+report_id: eed8fc0771c7d78391a2a1d3539021c7
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-14T10:21:09+00:00'
+timestamp: '2024-01-05T08:53:23+00:00'
 requested_by: jimmyandrade
 provider: github
 branch: main
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -25,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com
   detection_source: Repo Metadata
 - name: TypeScript
   description: A superset of JavaScript that compiles to clean JavaScript output
@@ -35,6 +38,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com
   detection_source: Repo Metadata
 - name: Autoprefixer
   description: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules
@@ -44,6 +48,7 @@ tools:
   category: Languages & Frameworks
   sub_category: CSS Pre-processors / Extensions
   image_url: https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/package.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2023-09-21 00:41:36.000000000 Z
@@ -69,6 +74,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/package.json
   detection_source: package.json
   last_updated_by: Jimmy Andrade
   last_updated_on: 2023-06-10 05:52:31.000000000 Z
@@ -81,6 +87,7 @@ tools:
   category: Languages & Frameworks
   sub_category: CSS Pre-processors / Extensions
   image_url: https://img.stackshare.io/service/3339/rlFcjEdI.png
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/package.json
   detection_source: package.json
   last_updated_by: Jimmy Andrade
   last_updated_on: 2023-06-10 05:52:31.000000000 Z
@@ -107,6 +114,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Front-End Frameworks
   image_url: https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/package.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2023-12-05 03:35:52.000000000 Z
@@ -118,6 +126,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/190/CvqrSSFs_400x400.jpg
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/.circleci/config.yml
   detection_source: ".circleci/config.yml"
   last_updated_by: Jimmy Andrade
   last_updated_on: 2023-06-12 02:47:36.000000000 Z
@@ -130,6 +139,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/package.json
   detection_source: package.json
   last_updated_by: Jimmy Andrade
   last_updated_on: 2023-06-10 05:52:31.000000000 Z
@@ -141,6 +151,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com
   detection_source: Repo Metadata
 - name: Jest
   description: Painless JavaScript Unit Testing
@@ -179,6 +190,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/5326/6p1SNAJu.jpg
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/.snyk
   detection_source: ".snyk"
   last_updated_by: Jimmy Andrade
   last_updated_on: 2023-06-12 02:47:36.000000000 Z
@@ -191,6 +203,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/.travis.yml
   detection_source: ".travis.yml"
   last_updated_by: Jimmy Andrade
   last_updated_on: 2023-06-12 02:47:36.000000000 Z
@@ -203,6 +216,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Text Editor
   image_url: https://img.stackshare.io/service/4202/Visual_Studio_Code_logo.png
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/.vscode/tasks.json
   detection_source: ".vscode/tasks.json"
   last_updated_by: Jimmy Andrade
   last_updated_on: 2023-06-12 02:47:36.000000000 Z
@@ -214,6 +228,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/package.json
   detection_source: package.json
   last_updated_by: Jimmy Andrade
   last_updated_on: 2023-06-10 05:52:31.000000000 Z
@@ -226,6 +241,7 @@ tools:
   category: Application Utilities
   sub_category: Static Web Hosting
   image_url: https://img.stackshare.io/service/2748/default_5dfbb146cf22182bca88c7d07f2515a5888fc12a.jpg
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/netlify.toml
   detection_source: netlify.toml
   last_updated_by: Jimmy Andrade
   last_updated_on: 2023-06-12 02:47:36.000000000 Z
@@ -238,6 +254,7 @@ tools:
   category: Communications
   sub_category: Large Language Model Tools
   image_url: https://img.stackshare.io/service/101756/default_4f2991cba3ec7fdd1cc87de69f4868157b0f2001.png
+  detection_source_url: https://github.com/jimmyandrade/jimmyandrade.com/blob/main/vercel.json
   detection_source: vercel.json
   last_updated_by: Jimmy Andrade
   last_updated_on: 2023-06-10 06:08:02.000000000 Z
