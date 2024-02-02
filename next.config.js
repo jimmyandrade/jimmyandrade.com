@@ -43,7 +43,11 @@ const nextConfig = {
         source: '/ultimato/videos',
         destination: 'https://www.youtube.com/watch?v=E_sZHM53ekE',
         permanent: false,
-      }
+      },
+      {
+        source: '/sinceramente-axe-remix',
+        destination: 'https://onerpm.link/119821866394',
+        permanent: false,
     ];
   },
 };
