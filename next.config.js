@@ -48,6 +48,7 @@ const nextConfig = {
         source: '/sinceramente-axe-remix',
         destination: 'https://onerpm.link/119821866394',
         permanent: false,
+      }
     ];
   },
 };
