@@ -25,6 +25,11 @@ const nextConfig = {
   redirects: async () => {
     return [
       {
+        source: '/%F0%9F%94%97',
+        destination: '/links',
+        permanent: true,
+      },
+      {
         source: '/manifest.json',
         destination: '/manifest.webmanifest',
         permanent: true,
