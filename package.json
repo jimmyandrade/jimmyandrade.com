@@ -34,7 +34,7 @@
     "@swc/jest": "0.2.37",
     "@testing-library/react": "14.3.1",
     "@types/jest": "^29.4.0",
-    "@types/node": "18.19.63",
+    "@types/node": "18.19.64",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
