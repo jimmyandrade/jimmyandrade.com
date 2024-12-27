@@ -1,9 +1,9 @@
-import { ChevronDownIcon } from '@radix-ui/react-icons';
-import classNames from 'classnames';
-import type { Metadata } from 'next';
-import { Montserrat, Zilla_Slab } from 'next/font/google';
-import type { ReactNode } from 'react';
-import { Wordmark } from '../src/components/Wordmark';
+import { ChevronDownIcon } from "@radix-ui/react-icons";
+import classNames from "classnames";
+import type { Metadata } from "next";
+import { Montserrat, Zilla_Slab } from "next/font/google";
+import type { ReactNode } from "react";
+import { Wordmark } from "../src/components/Wordmark";
 import {
   appName,
   baseURL,
@@ -17,12 +17,12 @@ import {
   productColor,
   pwaStartUrl,
   twitterHandle,
-} from '../src/constants';
-import './global.css';
+} from "../src/constants";
+import "./global.css";
 
 const defaultTitle = `${appName} – website oficial – músicas, vídeos e mais`;
 
-const url = '/';
+const url = "/";
 
 export const metadata: Metadata = {
   appLinks: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
   },
   appleWebApp: {
-    statusBarStyle: 'black-translucent',
+    statusBarStyle: "black-translucent",
     title: appName,
   },
   authors: [
@@ -51,55 +51,55 @@ export const metadata: Metadata = {
   },
   keywords: keywordsArray,
   icons,
-  manifest: '/manifest.webmanifest',
+  manifest: "/manifest.webmanifest",
   metadataBase: new URL(baseURL),
   openGraph: {
-    determiner: 'the',
+    determiner: "the",
     title: defaultTitle,
     description,
-    emails: 'contato@jimmyandrade',
+    emails: "contato@jimmyandrade",
     siteName: appName,
-    locale: defaultLanguage.replace('-', '_'),
+    locale: defaultLanguage.replace("-", "_"),
     url: `${baseURL}${url}`,
-    countryName: 'Brasil',
-    type: 'website',
+    countryName: "Brasil",
+    type: "website",
   },
   other: {
-    audience: 'all',
-    'blazerr-secure': 'yes',
-    'blazerr-ssl': 'yes',
-    'dc.description': description,
-    'dc.language': defaultLanguage,
-    'dc.publisher': companyName,
-    'dc.title': defaultTitle,
-    'dcterms.language': defaultLanguage,
-    'dcterms.publisher': companyName,
+    audience: "all",
+    "blazerr-secure": "yes",
+    "blazerr-ssl": "yes",
+    "dc.description": description,
+    "dc.language": defaultLanguage,
+    "dc.publisher": companyName,
+    "dc.title": defaultTitle,
+    "dcterms.language": defaultLanguage,
+    "dcterms.publisher": companyName,
     designer: companyName,
     essaydirectory: description,
-    'fb:admins': '100009370087276',
-    'fb:app_id': '1254652431311045',
-    'fdse-description': description,
-    'fdse-keywords': keywordsString,
+    "fb:admins": "100009370087276",
+    "fb:app_id": "1254652431311045",
+    "fdse-description": description,
+    "fdse-keywords": keywordsString,
     fspagedescription: description,
-    'geo.a1': 'MG',
-    'geo.a3': 'Belo Horizonte',
-    'geo.country': 'BR',
-    'geo.placename': 'Belo Horizonte, Minas Gerais',
-    'geo.property': `locale=${defaultLanguage}`,
-    'geo.region': defaultLanguage,
-    handheldfriendly: 'true',
-    ie_rm_off: 'true',
-    'mobile-agent': `format=html5; url=${baseURL}`,
+    "geo.a1": "MG",
+    "geo.a3": "Belo Horizonte",
+    "geo.country": "BR",
+    "geo.placename": "Belo Horizonte, Minas Gerais",
+    "geo.property": `locale=${defaultLanguage}`,
+    "geo.region": defaultLanguage,
+    handheldfriendly: "true",
+    ie_rm_off: "true",
+    "mobile-agent": `format=html5; url=${baseURL}`,
     mobileoptimized: 320,
-    'mobile-web-app-capable': 'yes',
-    'msapplication-navbutton-color': productColor,
-    'msapplication-starturl': `${url}${pwaStartUrl}`,
-    'msapplication-tilecolor': productColor,
-    'msapplication-tooltip': description,
-    skype_toolbar: 'skype_toolbar_parser_compatible',
-    'twitter:domain': 'jimmyandrade.com',
-    'twitter:site:id': '63541022',
-    'twitter:url': url,
+    "mobile-web-app-capable": "yes",
+    "msapplication-navbutton-color": productColor,
+    "msapplication-starturl": `${url}${pwaStartUrl}`,
+    "msapplication-tilecolor": productColor,
+    "msapplication-tooltip": description,
+    skype_toolbar: "skype_toolbar_parser_compatible",
+    "twitter:domain": "jimmyandrade.com",
+    "twitter:site:id": "63541022",
+    "twitter:url": url,
     web_author: companyName,
     zoomdescription: description,
     zoomtitle: defaultTitle,
@@ -111,9 +111,9 @@ export const metadata: Metadata = {
     googleBot: {
       follow: true,
       index: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
       noimageindex: false,
     },
     index: true,
@@ -125,31 +125,31 @@ export const metadata: Metadata = {
     template: `%s | ${appName}`,
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     site: twitterHandle,
     creator: twitterHandle,
-    creatorId: '63541022',
+    creatorId: "63541022",
     description,
     title: defaultTitle,
   },
   viewport: {
     initialScale: 1,
     minimumScale: 1,
-    width: 'device-width',
+    width: "device-width",
   },
 };
 
 const sansSerifFont = Montserrat({
-  display: 'swap',
-  subsets: ['latin'],
-  variable: '--font-sans',
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 const serifFont = Zilla_Slab({
-  display: 'swap',
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-serif',
+  display: "swap",
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-serif",
 });
 
 export interface RootLayoutProps {
@@ -160,54 +160,29 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html
       className={classNames(
-        'font-sans leading-6 scroll-smooth',
         sansSerifFont.variable,
-        serifFont.variable,
+        serifFont.variable
       )}
-      dir={'ltr'}
-      lang={defaultLanguage}
-      id={'root'}
     >
       <body
         className={
-          'bg-ultimato bg-gradient-to-tl font-sans leading-6 m-0 overscroll-none'
+          "bg-ultimato bg-gradient-to-tl leading-6"
         }
-        key={'body'}
       >
-        <h1 className={'sr-only'}>
+        <h1 className={"sr-only"}>
           <Wordmark />
         </h1>
-        <noscript
-          dangerouslySetInnerHTML={{ __html: '<!--googleoff: all-->' }}
-        />
+
         <a
           className={
-            'skip-to-content inline-flex  touchable sr-only focus:not-sr-only focus:absolute top-0 z-40 bg-grape-40 w-fit text-white'
+            "skip-to-content inline-flex  touchable sr-only focus:not-sr-only focus:absolute top-0 z-40 bg-grape-40 w-fit text-white"
           }
           href={`#${contentAnchorName}`}
         >
-          <span className={'inline-flex gap-x-2 items-center px-4'}>
+          <span className={"inline-flex gap-x-2 items-center px-4"}>
             Ir para o conteúdo <ChevronDownIcon />
           </span>
         </a>
-        <noscript
-          dangerouslySetInnerHTML={{ __html: '<!--googleon: all-->' }}
-        />
-        {children}
-        <div
-          id="wp-a11y-speak-polite"
-          aria-live="polite"
-          aria-relevant="additions text"
-          aria-atomic="true"
-          className="screen-reader-text wp-a11y-speak-region"
-        />
-        <div
-          id="wp-a11y-speak-assertive"
-          aria-live="assertive"
-          aria-relevant="additions text"
-          aria-atomic="true"
-          className="screen-reader-text wp-a11y-speak-region"
-        />
       </body>
     </html>
   );

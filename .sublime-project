@@ -1,5 +1,0 @@
-{
-  "settings": {
-    "SublimeLinter.linters.jshint.disable": true
-  }
-}

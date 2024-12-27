@@ -59,10 +59,9 @@ export const SiteSearchForm = forwardRef<HTMLFormElement, SiteSearchFormProps>(
           Buscar no site
         </label>
         <input
-          id={'q'}
-          name={'q'}
+
           onChange={handleSearchInputValueChange}
-          type={'search'}
+          
           value={searchInputValue}
         />
         <button type={'submit'}>Buscar</button>

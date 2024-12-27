@@ -1,7 +1,0 @@
-{
-  "buildCommand": "npx nx build jimmyandrade.com --prod",
-  "devCommand": "npx nx serve jimmyandrade.com",
-  "ignoreCommand": "npx nx-ignore jimmyandrade.com",
-  "installCommand": "npm ci",
-  "outputDirectory": "dist/jimmyandrade.com/.next"
-}

@@ -12,7 +12,7 @@ export async function GET() {
   const notion = new Client({
     auth,
   });
-  const musicDatabaseId = "14277df52414430f967940559a83159f";
+  const musicDatabaseId = "";
   try {
     const getMusicDatabaseData = await notion.databases.query({
       database_id: musicDatabaseId,
